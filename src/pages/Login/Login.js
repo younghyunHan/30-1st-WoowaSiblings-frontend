@@ -17,6 +17,10 @@ function Login() {
           </div>
         </form>
         <button className="loginBtn">로그인</button>
+
+        <a href="#">
+          <h3 className="signup">회원가입</h3>
+        </a>
       </div>
     </div>
   );

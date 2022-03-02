@@ -1,4 +1,7 @@
 .Login {
+  a {
+    text-decoration: none;
+  }
   font-family: 'NotoSans';
   max-width: 1200px;
   width: 1200px;
@@ -37,10 +40,10 @@
       color: white;
       font-size: 18px;
       font-weight: 800;
-
-      :hover {
-        background-color: #000000;
-      }
+      cursor: pointer;
+    }
+    .loginBtn:hover {
+      background-color: #000000;
     }
 
     .check {
@@ -85,6 +88,10 @@
         margin-left: 6px;
         cursor: pointer;
       }
+    }
+    .signup {
+      margin-top: 30px;
+      color: #000000;
     }
   }
 }

@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 .Nav {
+  border-bottom: 1px solid #eeee;
   font-family: 'NotoSans';
 
   .topBar {
     position: absolute;
-    background-color: #eeee;
+    top: 40px;
     width: 100%;
     height: 1px;
-    top: 40px;
+    background-color: #eeee;
   }
 
   .navWarp {
@@ -14,17 +17,17 @@
     min-width: 1200px;
     margin: 0 auto;
 
-    .top {
+    .userMenu {
       width: 100%;
-      border-bottom: 1px solid #eeee;
       padding-right: 70px;
+      border-bottom: 1px solid #eeee;
 
-      .top-header {
-        width: 100%;
-        max-width: 1200px;
+      .userMenuText {
         display: flex;
         align-items: center;
         justify-content: end;
+        width: 100%;
+        max-width: 1200px;
         height: 40px;
 
         li {
@@ -41,19 +44,19 @@
         }
 
         .cartNumber {
-          text-decoration: none;
-          color: #29c1bc;
           margin-left: 4px;
+          text-decoration: none;
           font-size: 10px;
           font-weight: bold;
+          color: #29c1bc;
         }
       }
 
-      .txt_bar {
+      .txtBar {
+        margin: 0 10px 3px;
         width: 1px;
         height: 8px;
         background-color: #ddd;
-        margin: 0 10px 3px;
       }
     }
 
@@ -75,37 +78,37 @@
         display: flex;
 
         .searchBox {
-          margin-right: 30px;
-          display: flex;
           position: absolute;
           right: 10px;
+          display: flex;
+          margin-right: 30px;
           width: 250px;
           border-bottom: 1px solid black;
 
           input {
-            font-size: 14px;
+            padding: 0;
+            margin-bottom: 3px;
             width: 100%;
             border: none;
             outline: none;
-            padding: 0;
-            margin-bottom: 3px;
+            font-size: 14px;
           }
         }
 
         .searchImg {
-          width: 18px;
           margin-bottom: 3px;
           margin-left: 10px;
+          width: 18px;
         }
       }
     }
 
     .cate {
-      width: 100%;
-      height: 55px;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
+      height: 55px;
 
       ul {
         display: flex;
@@ -113,39 +116,29 @@
 
         li {
           padding: 0 30px;
-          color: #333333;
           font-weight: 500;
           font-size: 16px;
-          display: inline-block;
+          color: #333333;
 
           :hover {
             color: #717171;
           }
 
           a {
-            display: block;
             line-height: 55px;
             text-decoration: none;
             color: #333333;
           }
           //클릭했을 때 title 변화!
           .active {
-            font-weight: bold;
-            color: #30c1c3;
-            border-bottom: 2px solid #30c1c3;
             position: absolute;
             height: 35px;
+            border-bottom: 2px solid #30c1c3;
+            font-weight: bold;
+            color: #30c1c3;
           }
         }
       }
     }
-  }
-  .bottomLine {
-    position: absolute;
-    background-color: #eeee;
-    width: 100%;
-    height: 1px;
-    top: 198px;
-    left: 0;
   }
 }

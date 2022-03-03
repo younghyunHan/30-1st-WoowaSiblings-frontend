@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import '../../styles/variables.scss';
 
 .Nav {
-  border-bottom: 1px solid #eeee;
+  border-bottom: $themeBorder;
   font-family: 'NotoSans';
 
   .topBar {
@@ -9,7 +9,7 @@
     top: 40px;
     width: 100%;
     height: 1px;
-    background-color: #eeee;
+    background-color: $grayBackgroundColor;
   }
 
   .navWarp {
@@ -20,7 +20,6 @@
     .userMenu {
       width: 100%;
       padding-right: 70px;
-      border-bottom: 1px solid #eeee;
 
       .userMenuText {
         display: flex;
@@ -31,15 +30,15 @@
         height: 40px;
 
         li {
-          font-size: 12px;
-
           :hover {
-            color: #717171;
+            color: $userMenuColor;
           }
 
           a {
             text-decoration: none;
-            color: #333333;
+            color: $userMenuHoverColor;
+            font-size: 12px;
+            font-weight: 500;
           }
         }
 
@@ -48,7 +47,7 @@
           text-decoration: none;
           font-size: 10px;
           font-weight: bold;
-          color: #29c1bc;
+          color: $baeminPointColor;
         }
       }
 
@@ -56,7 +55,7 @@
         margin: 0 10px 3px;
         width: 1px;
         height: 8px;
-        background-color: #ddd;
+        background-color: $grayBackgroundColor;
       }
     }
 
@@ -121,21 +120,22 @@
           color: #333333;
 
           :hover {
-            color: #717171;
+            color: $userMenuColor;
           }
 
           a {
             line-height: 55px;
+            font-weight: 700;
             text-decoration: none;
-            color: #333333;
+            color: $userMenuColor;
           }
           //클릭했을 때 title 변화!
           .active {
             position: absolute;
             height: 35px;
-            border-bottom: 2px solid #30c1c3;
+            border-bottom: 2px solid $baeminPointColor;
             font-weight: bold;
-            color: #30c1c3;
+            color: $baeminPointColor;
           }
         }
       }

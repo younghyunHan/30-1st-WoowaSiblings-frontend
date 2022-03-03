@@ -22,7 +22,7 @@ function Nav() {
             <li>
               <a href="/cart">장바구니</a>
             </li>
-            <a className="cartNumber" href="#">
+            <a className="cartNumber" href="/cart">
               0
             </a>
           </ul>

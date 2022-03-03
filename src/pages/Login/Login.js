@@ -14,7 +14,7 @@ function Login() {
   };
 
   const goToMain = () => {
-    fetch('은지님 컴온', {
+    fetch('http://10.58.2.78:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,
@@ -23,14 +23,14 @@ function Login() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        if (data.error) {
-          alert('아이디와 비밀번호가 일치하지 않습니다.');
-        } else {
+        if (data.ACCESS_TOKEN) {
           navigate('/main');
+        } else if (data.message === 'INVALID_USER') {
+          alert('id와 password를 확인해주세요!!');
         }
       });
   };
+  //alert("")
 
   return (
     <div className="Login">

@@ -10,8 +10,8 @@ function Login() {
           <input className="inputText" placeholder="비밀번호" type="password" />
           <div className="check">
             <input className="inputCheck" type="checkbox" id="c_box" />
-            <label for="c_box" />
-            <label className="checkText" for="c_box">
+            <label className="checkText" for="c_box" />
+            <label className="clickText" for="c_box">
               아이디 저장
             </label>
           </div>

@@ -10,15 +10,15 @@ function Login() {
           <input className="inputText" placeholder="비밀번호" type="password" />
           <div className="check">
             <input className="inputCheck" type="checkbox" id="c_box" />
-            <label for="c_box"></label>
-            <label for="c_box" className="checkText">
+            <label for="c_box" />
+            <label className="checkText" for="c_box">
               아이디 저장
             </label>
           </div>
         </form>
         <button className="loginBtn">로그인</button>
 
-        <a href="#">
+        <a href="/sign">
           <h3 className="signup">회원가입</h3>
         </a>
       </div>

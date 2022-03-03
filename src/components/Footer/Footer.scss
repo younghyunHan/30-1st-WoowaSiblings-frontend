@@ -1,0 +1,44 @@
+.footer {
+  height: 300px;
+  padding-bottom: 40px;
+  background-color: #f6f6f6;
+
+  .footerWrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+    .brandLogo {
+      width: 300px;
+
+      .logoImage {
+        height: 100px;
+        width: 130px;
+      }
+    }
+
+    .footerContent {
+      .footerInfo {
+        margin-bottom: 30px;
+
+        .footerInfoList {
+          margin-right: 30px;
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          font-family: 'Noto Sans', sans-serif;
+          text-decoration: none;
+        }
+      }
+
+      .footerDataList {
+        margin-bottom: 10px;
+        color: #717171;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'Nanum Gothic', sans-serif;
+        line-height: 1.5;
+      }
+    }
+  }
+}

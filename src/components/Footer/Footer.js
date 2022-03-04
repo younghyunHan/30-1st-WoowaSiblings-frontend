@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import footerInfoData from './FooterInfoData';
 import footerDataList from './FooterDataList';
 import './Footer.scss';

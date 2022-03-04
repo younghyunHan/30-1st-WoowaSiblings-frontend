@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import './Main.scss';
+import './ItemList.scss';
 
-function Main() {
+function ItemList() {
   const [mainList, setMainList] = useState([]);
 
   useEffect(() => {
@@ -13,14 +13,14 @@ function Main() {
   }, []);
 
   return (
-    <div className="main">
-      <div className="mainListMainWrap">
-        <div className="mainListContent">
-          <ul className="mainListCotentGallery">
+    <div className="itemList">
+      <div className="itemListMainWrap">
+        <div className="itemListContent">
+          <ul className="itemListCotentGallery">
             {mainList.map(content => {
               return (
                 <li key={content.id} className="listGallery">
-                  <div className="GalleryItem">
+                  <div className="galleryItem">
                     <div className="itemPhotoBox">
                       <a href="#" className="itemPageMove">
                         <img
@@ -54,4 +54,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default ItemList;

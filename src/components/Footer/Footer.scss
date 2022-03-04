@@ -1,45 +1,38 @@
 .footer {
+  display: flex;
+  justify-content: center;
   height: 300px;
-  padding-bottom: 40px;
+  padding: 50px 0 40px;
   background-color: #f6f6f6;
 
-  .footerWrap {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+  .logoImage {
+    width: 130px;
+    height: 100px;
+    margin-right: 150px;
+  }
 
-    .brandLogo {
-      width: 300px;
+  .footerContent {
+    .footerInfo {
+      margin-bottom: 30px;
 
-      .logoImage {
-        height: 100px;
-        width: 130px;
+      .footerInfoList {
+        margin-right: 30px;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        font-family: 'Noto Sans', sans-serif;
+        text-decoration: none;
       }
     }
 
-    .footerContent {
-      .footerInfo {
-        margin-bottom: 30px;
-
-        .footerInfoList {
-          margin-right: 30px;
-          color: black;
-          font-weight: bold;
-          font-size: 15px;
-          font-family: 'Noto Sans', sans-serif;
-          text-decoration: none;
-        }
-      }
-
-      .footerDataList {
-        margin-bottom: 10px;
-        color: #717171;
-        font-size: 12px;
-        font-weight: bold;
-        font-family: 'Nanum Gothic', sans-serif;
-        line-height: 1.5;
-        list-style: none;
-      }
+    .footerDataList {
+      margin-bottom: 10px;
+      color: #717171;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      line-height: 1.5;
+      list-style: none;
     }
   }
 }

@@ -1,4 +1,4 @@
-let FOOTER_INFO_DATA = [
+const FOOTER_INFO_DATA = [
   {
     id: 1,
     content: '공지사항',

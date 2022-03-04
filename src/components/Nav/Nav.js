@@ -1,37 +1,40 @@
 import './Nav.scss';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <nav className="Nav">
+    <nav className="nav">
       <div className="topBar" />
       <div className="navWarp">
         <div className="userMenu">
           <ul className="userMenuText">
             <li>
-              <a href="/">로그인</a>
+              <Link Link to="/">
+                로그인
+              </Link>
             </li>
             <span className="txtBar" />
             <li>
-              <a href="/sign">회원가입</a>
+              <Link to="/sign">회원가입</Link>
             </li>
             <span className="txtBar" />
             <li>
-              <a href="/mypage">마이페이지</a>
+              <Link to="/mypage">마이페이지</Link>
             </li>
             <span className="txtBar" />
             <li>
-              <a href="/cart">장바구니</a>
+              <Link to="/cart">장바구니</Link>
             </li>
-            <a className="cartNumber" href="/cart">
+            <Link to="/cart" className="cartNumber">
               0
-            </a>
+            </Link>
           </ul>
         </div>
 
         <div className="middle">
-          <a href="/main">
+          <Link to="/main">
             <img className="logo" alt="배민문방구" src="images/welogo.png" />
-          </a>
+          </Link>
           <form className="search">
             <div className="searchBox">
               <input placeholder="검색어를 입력해주세요." />
@@ -40,22 +43,19 @@ function Nav() {
           </form>
         </div>
 
-        <div className="cate">
+        <div className="category">
           <ul>
             <li>
-              <a href="/all">전체</a>
+              <Link to="/main">전체</Link>
             </li>
             <li>
-              <a href="/goods_service">삼십기스</a>
+              <Link to="/goods_service">삼십기스</Link>
             </li>
             <li>
-              <a href="/goods_things">30기의 물건</a>
+              <Link to="/goods_things">30기의 물건</Link>
             </li>
             <li>
-              <a href="/goods_mentors">멘톳쓰</a>
-            </li>
-            <li>
-              <a href="/goods_eat">삼십세끼</a>
+              <Link to="/goods_mentors">멘톳쓰</Link>
             </li>
           </ul>
         </div>

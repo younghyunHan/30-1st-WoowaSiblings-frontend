@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.Nav {
+.nav {
   border-bottom: $themeBorder;
   font-family: 'NotoSans';
 
@@ -102,7 +102,7 @@
       }
     }
 
-    .cate {
+    .category {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -115,6 +115,7 @@
 
         li {
           padding: 0 30px;
+          margin: 0 30px;
           font-weight: 500;
           font-size: 16px;
           color: #333333;

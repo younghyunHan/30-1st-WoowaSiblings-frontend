@@ -12,7 +12,7 @@ function Sign() {
     setValues({ ...values, [name]: value });
   };
 
-  const goToMain = () => {
+  const goToLogin = () => {
     fetch('http://10.58.2.78:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
@@ -22,7 +22,7 @@ function Sign() {
     })
       .then(response => response.json())
       .then(data => {
-        if (data.ACCESS_TOKEN) {
+        if (data.message === 'SUCCESS') {
           navigate('/');
         } else if (data.message === 'INVALID_USER') {
           alert('유효한 id입니다.');
@@ -49,7 +49,7 @@ function Sign() {
             type="password"
           />
         </form>
-        <button onClick={goToMain} className="loginBtn">
+        <button onClick={goToLogin} className="loginBtn">
           회원가입
         </button>
       </div>

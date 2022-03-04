@@ -1,0 +1,87 @@
+.login {
+  margin-top: 40px;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .title {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .loginBox {
+    margin: 0 auto;
+    width: 300px;
+
+    .inputText {
+      margin-bottom: 12px;
+      width: 100%;
+      height: 50px;
+      font-size: 16px;
+      font-weight: 500;
+      outline: unset;
+      border: none;
+      border-bottom: 1px solid #c0c0c0;
+    }
+
+    .check {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-bottom: 26px;
+
+      .inputCheck {
+        margin: 0;
+
+        &:hover + .checkText {
+          background: url(../../assets/images/hover.png) no-repeat 0 0px /
+            contain;
+        }
+
+        &:checked + .checkText {
+          background: url(../../assets/images/Active.png) no-repeat 0 0px /
+            contain;
+        }
+      }
+
+      .checkText {
+        background: url(../../assets/images/nonActive.png) no-repeat 0 0px /
+          contain;
+        display: inline-block;
+        padding: 2px 0 0 6px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .clickText {
+        font-size: 14px;
+        padding-left: 8px;
+        cursor: pointer;
+      }
+    }
+    .loginBtn {
+      width: 100%;
+      height: 55px;
+      background-color: #333333;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #000000;
+      }
+    }
+
+    .signup {
+      margin-top: 30px;
+      color: #000000;
+    }
+  }
+}

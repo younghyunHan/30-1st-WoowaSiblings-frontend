@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
+import { useNavigate, Link } from 'react-router-dom';
 
 import './Login.scss';
 
 function Login() {
   const [values, setValues] = useState({ id: '', password: '' });
-
+  console.log(values);
   const navigate = useNavigate();
 
   const handleChange = e => {
@@ -33,21 +34,19 @@ function Login() {
   //alert("")
 
   return (
-    <div className="Login">
+    <div className="login">
       <h2 className="title">회원 로그인</h2>
       <div className="loginBox">
         <form>
           <input
             onChange={handleChange}
             name="id"
-            value={values.id}
             className="inputText"
             placeholder="아이디"
           />
           <input
             onChange={handleChange}
             name="password"
-            value={values.password}
             className="inputText"
             placeholder="비밀번호"
             type="password"
@@ -64,9 +63,9 @@ function Login() {
           로그인
         </button>
 
-        <a href="/sign">
+        <Link to="/sign">
           <h3 className="signup">회원가입</h3>
-        </a>
+        </Link>
       </div>
     </div>
   );

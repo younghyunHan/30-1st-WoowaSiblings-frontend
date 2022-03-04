@@ -5,7 +5,7 @@
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
     "id": 4,
@@ -29,142 +29,142 @@
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 5,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 6,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 7,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 8,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 9,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 10,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 11,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 12,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 13,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 14,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 15,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 16,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 17,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 18,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 19,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 20,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   },
   {
-    "id": 4,
+    "id": 21,
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "discountRate": "40%",
     "itemName": "플리츠마마X배달의민족",
     "itemPrice": 49000,
-    "itemDiscountRate": 29000
+    "itemDiscountPrice": 29000
   }
 ]

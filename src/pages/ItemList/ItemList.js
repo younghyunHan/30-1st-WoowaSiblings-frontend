@@ -2,35 +2,34 @@ import { useState, useEffect } from 'react';
 import './ItemList.scss';
 
 function ItemList() {
-  const [mainList, setMainList] = useState([]);
+  const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch('/data/mainData.json')
+    fetch('/data/listData.json')
       .then(res => res.json())
       .then(data => {
-        setMainList(data);
+        setList(data);
       });
   }, []);
 
   return (
     <div className="itemList">
-      <div className="itemListMainWrap">
+      <div className="itemListWrap">
         <div className="itemListContent">
           <ul className="itemListCotentGallery">
-            {mainList.map(content => {
+            {list.map(content => {
               return (
                 <li key={content.id} className="listGallery">
                   <div className="galleryItem">
                     <div className="itemPhotoBox">
                       <a href="#" className="itemPageMove">
                         <img
-                          className="mainImage"
+                          className="listImage"
                           src={content.image}
-                          alt="goodsItem"
+                          alt="listItem"
                         />
                       </a>
                     </div>
-
                     <div className="itemDiscountRate">
                       {content.discountRate}
                     </div>
@@ -40,8 +39,10 @@ function ItemList() {
                       </a>
                     </div>
                     <div className="itemMoneyBox">
-                      <span className="originalPrice">49,000원</span>
-                      <span className="discountPrice">29,000원</span>
+                      <span className="originalPrice">{content.itemPrice}</span>
+                      <span className="discountPrice">
+                        {content.itemDiscountPrice}
+                      </span>
                     </div>
                   </div>
                 </li>

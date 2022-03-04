@@ -25,6 +25,7 @@ function Login() {
       .then(response => response.json())
       .then(data => {
         if (data.ACCESS_TOKEN) {
+          localStorage.setItem('token', data.ACCESS_TOKEN);
           navigate('/main');
         } else if (data.message === 'INVALID_USER') {
           alert('id와 password를 확인해주세요!!');

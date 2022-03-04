@@ -28,20 +28,20 @@ function Nav() {
       <div className="navWarp">
         <div className="userMenu">
           <ul className="userMenuText">
-            {USER_MENU_LIST.map(data => {
+            {USER_MENU_LIST.map((data, index) => {
               return (
-                <>
-                  <li>
-                    <Link to={data.movePath}>{data.userMenu}</Link>
-                  </li>
-                  <span className="txtBar" />
-                </>
+                <li key={data.id}>
+                  <Link to={data.movePath}>{data.userMenu}</Link>
+                  {!(index === USER_MENU_LIST.length - 1) && (
+                    <div className="txtBar" />
+                  )}
+                </li>
               );
             })}
-            <Link to={'/cart'} className="cartNumber">
-              {cartNumber}
-            </Link>
           </ul>
+          <Link to={'/cart'} className="cartNumber">
+            {cartNumber}
+          </Link>
         </div>
 
         <div className="middle">

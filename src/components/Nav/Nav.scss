@@ -18,6 +18,8 @@
     margin: 0 auto;
 
     .userMenu {
+      display: flex;
+      align-items: center;
       width: 100%;
       padding-right: 70px;
 
@@ -30,32 +32,36 @@
         height: 40px;
 
         li {
+          display: flex;
+          align-items: center;
+
+          .txtBar {
+            display: inline-block;
+            margin: 0 10px 3px;
+            width: 1px;
+            height: 8px;
+            background-color: $grayBackgroundColor;
+          }
+
           :hover {
             color: $userMenuColor;
           }
-
-          a {
-            text-decoration: none;
-            color: $userMenuHoverColor;
-            font-size: 12px;
-            font-weight: 500;
-          }
         }
 
-        .cartNumber {
-          margin-left: 4px;
+        a {
           text-decoration: none;
-          font-size: 10px;
-          font-weight: bold;
-          color: $baeminPointColor;
+          color: $userMenuHoverColor;
+          font-size: 12px;
+          font-weight: 500;
         }
       }
 
-      .txtBar {
-        margin: 0 10px 3px;
-        width: 1px;
-        height: 8px;
-        background-color: $grayBackgroundColor;
+      .cartNumber {
+        margin-left: 4px;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: bold;
+        color: $baeminPointColor;
       }
     }
 

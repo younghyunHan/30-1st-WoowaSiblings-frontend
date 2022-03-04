@@ -6,7 +6,7 @@ import './Login.scss';
 
 function Login() {
   const [values, setValues] = useState({ id: '', password: '' });
-  console.log(values);
+
   const navigate = useNavigate();
 
   const handleChange = e => {
@@ -15,7 +15,7 @@ function Login() {
   };
 
   const goToMain = () => {
-    fetch('http://10.58.2.78:8000/users/signup', {
+    fetch('http://10.58.2.78:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,

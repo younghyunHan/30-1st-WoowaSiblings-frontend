@@ -1,5 +1,5 @@
 import './Nav.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 function Nav() {
@@ -23,57 +23,61 @@ function Nav() {
     },
   ];
   return (
-    <nav className="nav">
-      <div className="topBar" />
-      <div className="navWarp">
-        <div className="userMenu">
-          <ul className="userMenuText">
-            {USER_MENU_LIST.map((data, index) => {
-              return (
-                <li key={data.id}>
-                  <Link to={data.movePath}>{data.userMenu}</Link>
-                  {!(index === USER_MENU_LIST.length - 1) && (
-                    <div className="txtBar" />
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-          <Link to={'/cart'} className="cartNumber">
-            {cartNumber}
-          </Link>
-        </div>
+    <div className="navWraper">
+      <nav className="nav">
+        <div className="topBar" />
+        <div className="navWarp">
+          <div className="userMenu">
+            <ul className="userMenuText">
+              {USER_MENU_LIST.map((data, index) => {
+                return (
+                  <li key={data.id}>
+                    <Link to={data.movePath}>{data.userMenu}</Link>
+                    {!(index === USER_MENU_LIST.length - 1) && (
+                      <div className="txtBar" />
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            <Link to={'/cart'} className="cartNumber">
+              {cartNumber}
+            </Link>
+          </div>
 
-        <div className="middle">
-          <Link to="/main">
-            <img className="logo" alt="배민문방구" src="images/welogo.png" />
-          </Link>
-          <form className="search">
-            <div className="searchBox">
-              <input placeholder="검색어를 입력해주세요." />
-              <img className="searchImg" alt="검색" src="images/search.png" />
-            </div>
-          </form>
-        </div>
+          <div className="middle">
+            <Link to="/main">
+              <img className="logo" alt="배민문방구" src="images/welogo.png" />
+            </Link>
+            <form className="search">
+              <div className="searchBox">
+                <input placeholder="검색어를 입력해주세요." />
+                <img className="searchImg" alt="검색" src="images/search.png" />
+              </div>
+            </form>
+          </div>
 
-        <div className="category">
-          <ul>
-            <li>
-              <Link to="/main">전체</Link>
-            </li>
-            <li>
-              <Link to="/goods_service">삼십기스</Link>
-            </li>
-            <li>
-              <Link to="/goods_things">30기의 물건</Link>
-            </li>
-            <li>
-              <Link to="/goods_mentors">멘톳쓰</Link>
-            </li>
-          </ul>
+          <div className="category">
+            <ul>
+              <li>
+                <NavLink activeClassName="active" to="/main">
+                  전체
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/goods_service">삼십기쓰</NavLink>
+              </li>
+              <li>
+                <NavLink to="/goods_things">삼십띵쓰</NavLink>
+              </li>
+              <li>
+                <NavLink to="/goods_mentors">멘톳쓰</NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 

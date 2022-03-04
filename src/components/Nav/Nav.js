@@ -1,32 +1,45 @@
 import './Nav.scss';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Nav() {
+  const [cartNumber, setCartNumber] = useState(0);
+
+  const USER_MENU_LIST = [
+    {
+      id: 1,
+      userMenu: '로그인',
+      movePath: '/',
+    },
+    {
+      id: 2,
+      userMenu: '회원가입',
+      movePath: '/sign',
+    },
+    {
+      id: 3,
+      userMenu: '장바구니',
+      movePath: '/cart',
+    },
+  ];
   return (
     <nav className="nav">
       <div className="topBar" />
       <div className="navWarp">
         <div className="userMenu">
           <ul className="userMenuText">
-            <li>
-              <Link Link to="/">
-                로그인
-              </Link>
-            </li>
-            <span className="txtBar" />
-            <li>
-              <Link to="/sign">회원가입</Link>
-            </li>
-            <span className="txtBar" />
-            <li>
-              <Link to="/mypage">마이페이지</Link>
-            </li>
-            <span className="txtBar" />
-            <li>
-              <Link to="/cart">장바구니</Link>
-            </li>
-            <Link to="/cart" className="cartNumber">
-              0
+            {USER_MENU_LIST.map(data => {
+              return (
+                <>
+                  <li>
+                    <Link to={data.movePath}>{data.userMenu}</Link>
+                  </li>
+                  <span className="txtBar" />
+                </>
+              );
+            })}
+            <Link to={'/cart'} className="cartNumber">
+              {cartNumber}
             </Link>
           </ul>
         </div>

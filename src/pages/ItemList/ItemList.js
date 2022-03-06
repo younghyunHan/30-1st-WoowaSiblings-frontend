@@ -12,6 +12,7 @@ function ItemList() {
         setList(data.results);
       });
   }, []);
+
   return (
     <div className="itemList">
       <div className="itemListContent">

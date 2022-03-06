@@ -1,6 +1,14 @@
+import { useState } from 'react';
+import SelectItem from './SelectItem';
 import './ItemDetail.scss';
 
 function ItemDetail() {
+  const [list, setList] = useState([]);
+
+  const onChange = event => {
+    setList(event.target.value);
+  };
+
   return (
     <div className="itemDetail">
       <div className="itemDetailContents">
@@ -24,17 +32,30 @@ function ItemDetail() {
             </div>
             <div className="itemOptionBox">
               <div className="itemOptionBoxOne">옵션</div>
-              <select className="itemOptionBoxTwo">
+              <select className="itemOptionBoxTwo" onChange={addSelectList}>
                 <option value="">= 옵션 : 가격 =</option>
-                <option value="">독고배달이</option>
-                <option value="">냥이배달이</option>
-                <option value="">메이배달이</option>
-                <option value="">왕배달이</option>
+                <option value="" onChange={onChange}>
+                  독고배달이
+                </option>
+                <option value="" onChange={onChange}>
+                  냥이배달이
+                </option>
+                <option value="" onChange={onChange}>
+                  메이배달이
+                </option>
+                <option value="" onChange={onChange}>
+                  왕배달이
+                </option>
               </select>
             </div>
           </div>
+          <div className="selectItemList">
+            {list.map(content => {
+              return <SelectItem key={content.id} />;
+            })}
+          </div>
           <div className="totalAmount">
-            <div>총 합계금액</div>
+            <div className="totalAmountOne">총 합계금액</div>
             <div className="totalPrice">
               <strong>3000원</strong>
             </div>

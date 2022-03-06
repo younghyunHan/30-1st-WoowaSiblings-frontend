@@ -1,0 +1,90 @@
+.itemDetail {
+  padding-top: 300px;
+  padding-bottom: 100px;
+  line-height: 1.5;
+
+  .itemDetailContents {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 40px;
+
+    .itemDetailImage {
+      width: 500px;
+      margin-right: 100px;
+    }
+
+    .itemInfoBox {
+      width: 500px;
+      .itemDetailTitle {
+        padding-bottom: 30px;
+        font-weight: 600;
+        font-size: 30px;
+      }
+
+      .itemDetailList {
+        margin: 10px 0 20px 0;
+
+        .itemPrice {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 4px 0;
+
+          .itemPriceOne {
+            margin: 0 50px 0 5px;
+            font-size: 18px;
+            color: #717171;
+            font-weight: 500;
+          }
+
+          .itemPriceTwo {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+
+        .itemDelivery {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 4px 0;
+
+          .itemDeliveryOne {
+            margin: 0 50px 0 5px;
+            font-size: 18px;
+            color: #717171;
+            font-weight: 500;
+          }
+
+          .itemDeliveryTwo {
+            font-size: 16px;
+          }
+        }
+
+        .itemOptionBox {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin: 5px 0 0 0;
+          padding: 10px 0 5px 0;
+
+          .itemOptionBoxOne {
+            margin: 0 50px 0 5px;
+            font-size: 18px;
+            color: #717171;
+            font-weight: 500;
+            width: 100px;
+          }
+
+          .itemOptionBoxTwo {
+            width: 100%;
+            border-color: #717171;
+            font-size: 15px;
+            color: #717171;
+          }
+        }
+      }
+    }
+  }
+}

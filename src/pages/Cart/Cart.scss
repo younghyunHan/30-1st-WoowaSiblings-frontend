@@ -62,19 +62,6 @@
     }
 
     .inputCheck {
-      margin: 0;
-
-      &:hover + .checkText {
-        background: url(../../assets/images/hover.png) no-repeat 0 0px / contain;
-      }
-
-      &:checked + .checkText {
-        background: url(../../assets/images/Active.png) no-repeat 0 0px /
-          contain;
-      }
-    }
-
-    .checkText {
       background: url(../../assets/images/nonActive.png) no-repeat 0 0px /
         contain;
       display: inline-block;
@@ -82,6 +69,16 @@
       width: 16px;
       height: 16px;
       cursor: pointer;
+      margin: 0;
+
+      &:hover {
+        background: url(../../assets/images/hover.png) no-repeat 0 0px / contain;
+      }
+
+      &:checked {
+        background: url(../../assets/images/Active.png) no-repeat 0 0px /
+          contain;
+      }
     }
   }
   .goToShopBox {

@@ -15,8 +15,6 @@ function Cart() {
       });
   }, []);
 
-  console.log(cartItem.length);
-
   return (
     <div className="cart">
       <div className="orderTitleBox">
@@ -27,8 +25,7 @@ function Cart() {
         <thead>
           <tr>
             <th>
-              <input className="inputCheck" type="checkbox" id="c_box" />
-              <label className="checkText" for="c_box" />
+              <input className="inputCheck" type="checkbox" />
             </th>
             <th>상품/옵션 정보</th>
             <th>수량</th>
@@ -41,8 +38,7 @@ function Cart() {
             return (
               <tr key={el.id}>
                 <td>
-                  <input className="inputCheck" type="checkbox" id="c_c_box" />
-                  <label className="checkText" for="c_c_box" />
+                  <input className="inputCheck" type="checkbox" />
                 </td>
                 <td>
                   <div className="cartList">

@@ -46,7 +46,7 @@ function Nav() {
           </div>
 
           <div className="middle">
-            <Link to="/main">
+            <Link to="/item-list">
               <img className="logo" alt="배민문방구" src="images/welogo.png" />
             </Link>
             <form className="search">
@@ -60,7 +60,7 @@ function Nav() {
           <div className="category">
             <ul>
               <li>
-                <NavLink activeClassName="active" to="/main">
+                <NavLink activeClassName="active" to="/item-list">
                   전체
                 </NavLink>
               </li>

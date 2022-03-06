@@ -19,5 +19,12 @@
     "price": 1000.0,
     "count": 1,
     "thumbnail_image": "https://images.unsplash.com/photo-1557686652-6731ba12410f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+  },
+  {
+    "id": 4,
+    "name": "기현님과 함께하는 피코커강의",
+    "price": 1000.0,
+    "count": 1,
+    "thumbnail_image": "https://images.unsplash.com/photo-1557686652-6731ba12410f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
   }
 ]

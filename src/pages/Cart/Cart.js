@@ -7,13 +7,15 @@ function Cart() {
 
   useEffect(() => {
     fetch('http://localhost:3000/data/CartItemList.json', {
-      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
-    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      method: 'GET',
+    })
       .then(res => res.json())
       .then(data => {
         setCartItem(data);
       });
   }, []);
+
+  console.log(cartItem.length);
 
   return (
     <div className="cart">
@@ -35,33 +37,35 @@ function Cart() {
           </tr>
         </thead>
         <tbody>
-          {cartItem.map(item => {
+          {cartItem.map(el => {
             return (
-              <tr>
+              <tr key={el.id}>
                 <td>
                   <input className="inputCheck" type="checkbox" id="c_c_box" />
                   <label className="checkText" for="c_c_box" />
                 </td>
                 <td>
                   <div className="cartList">
-                    <img alt="" width={40} src="{item.thumbnail_image}"></img>
-                    <h3>{item.name}</h3>
+                    <img alt="" width={40} src="{el.thumbnail_image}"></img>
+                    <h3>{el.name}</h3>
                   </div>
                 </td>
-                <td>{item.count}개</td>
-                <td>{item.price * item.count}원</td>
-                <td rowSpan={1} className="tdLast">
-                  기본 배송비
-                  <br /> 0원 <br />
-                  택배-선결제
-                </td>
+                <td>{el.count}개</td>
+                <td>{el.price * el.count}원</td>
+                {el.id === 1 && (
+                  <td rowSpan={cartItem.length} className="tdLast">
+                    <p>기본 배송비</p>
+                    <p>0원</p>
+                    <p>택배-선결제</p>
+                  </td>
+                )}
               </tr>
             );
           })}
         </tbody>
       </table>
       <div className="goToShopBox">
-        <Link to={'/main'} className="goToShop">
+        <Link to={'/item-list'} className="goToShop">
           &lt; 쇼핑 계속하기
         </Link>
       </div>
@@ -69,10 +73,11 @@ function Cart() {
         <div className="totalPriceList">
           <ul>
             <li>
-              총 <strong className="totalCount">{}</strong> 개의 상품금액
+              총 <strong className="totalCount">{cartItem.length}</strong>
+              개의 상품금액
             </li>
             <li>
-              <strong className="totalGoodsPrice">219,300</strong>원
+              <strong className="totalGoodsPrice">{}</strong>원
             </li>
           </ul>
           <span>

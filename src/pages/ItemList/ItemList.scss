@@ -3,76 +3,80 @@
 .itemList {
   width: 1200px;
   margin: 0 auto;
+  padding-top: 300px;
+  padding-bottom: 100px;
   line-height: 1.5;
 
-  .itemListWrap {
-    padding-bottom: 30px;
+  .itemListContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
-    .itemListContent {
-      width: 100%;
+    .itemListCotentGallery {
       display: flex;
-      justify-content: center;
-      padding-bottom: 30px;
+      flex-wrap: wrap;
 
-      .itemListCotentGallery {
-        display: flex;
-        flex-wrap: wrap;
+      .listGallery {
+        margin: 20px 0px;
+        list-style: none;
+        line-height: 1.5;
+        padding: 0 10px;
 
-        .listGallery {
-          margin: 20px 0px;
-          list-style: none;
-          line-height: 1.5;
-          padding: 0 10px;
+        .galleryItem {
+          .itemPhotoBox {
+            margin: 0px;
+            width: 280px;
+            height: 350px;
+            overflow: hidden;
 
-          .galleryItem {
-            .itemPhotoBox {
-              margin: 0px;
-              width: 280px;
-              height: 350px;
-              overflow: hidden;
-
-              .itemPageMove {
-                .listImage {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: fill;
-                }
+            .itemPageMove {
+              .listImage {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
               }
             }
+          }
 
-            .itemDiscountRate {
-              color: rgb(255, 99, 80);
-              font-size: 20px;
-              font-weight: 600;
-              line-height: 30px;
-              font-family: 'Montserrat', sans-serif;
+          .itemDiscountRate {
+            color: rgb(255, 99, 80);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            line-height: 2;
+          }
+
+          .itemTitleBox {
+            line-height: 2.5;
+            .itemTitleBoxName {
               text-decoration: none;
-              line-height: 2.3;
+              color: black;
+              font-size: 16px;
+              font-weight: normal;
+              padding-top: 3px;
+            }
+          }
+
+          .itemMoneyBox {
+            .originalPrice {
+              display: block;
+              color: #888;
+              text-decoration: line-through;
+              text-decoration-style: solid;
+              line-height: 1;
+              font-size: 12px;
             }
 
-            .itemTitleBox {
-              .itemTitleBoxName {
-                text-decoration: none;
-                color: black;
-                font-size: 16px;
-                font-weight: normal;
-                line-height: 24px;
-                padding-top: 3px;
-              }
+            .priceBig {
+              color: black;
+              font-size: 15px;
+              text-decoration: none;
+              text-decoration-style: solid;
             }
-
-            .itemMoneyBox {
-              .originalPrice {
-                display: block;
-                color: #888;
-                text-decoration: line-through;
-                text-decoration-style: solid;
-                line-height: 1;
-                font-size: 12px;
-              }
-              .discountPrice {
-                font-family: 'Montserrat', sans-serif;
-              }
+            .discountPrice {
+              font-family: 'Montserrat', sans-serif;
             }
           }
         }

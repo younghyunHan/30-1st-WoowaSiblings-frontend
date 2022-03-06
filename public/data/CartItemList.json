@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "수인님의 모니터",
+    "price": 3000.0,
+    "count": 1,
+    "thumbnail_image": "https://images.unsplash.com/photo-1644307358784-c6c589c9dcac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=673&q=80"
+  },
+  {
+    "id": 2,
+    "name": "차은우의 어깨",
+    "price": 3000.0,
+    "count": 4,
+    "thumbnail_image": "https://images.unsplash.com/photo-1646423225693-87b585201127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+  },
+  {
+    "id": 3,
+    "name": "기현님과 함께하는 피코커강의",
+    "price": 1000.0,
+    "count": 1,
+    "thumbnail_image": "https://images.unsplash.com/photo-1557686652-6731ba12410f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+  }
+]

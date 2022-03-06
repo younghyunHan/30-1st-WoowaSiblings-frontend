@@ -84,4 +84,108 @@
       cursor: pointer;
     }
   }
+  .goToShopBox {
+    margin: 18px 0 30px 0;
+    .goToShop {
+      color: #333333;
+      font-size: 12px;
+      text-decoration: none;
+      height: 18px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #333333;
+    }
+  }
+  .totalPriceBox {
+    width: 100%;
+    padding: 20px 40px 25px 35px;
+    border: 2px solid #d6d6d6;
+    text-align: end;
+
+    .totalPriceList {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      span {
+        padding: 0 15px;
+      }
+
+      ul {
+        display: table-cell;
+        padding: 5px 10px;
+        font-size: 16px;
+
+        li {
+          &:first-child {
+            margin-bottom: 6px;
+          }
+        }
+
+        strong {
+          font-weight: 700;
+          font-size: 18px;
+        }
+
+        .totalCount {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .totalSettlePrice {
+          color: #29c1bc;
+        }
+      }
+    }
+  }
+  .btnOrderBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+
+    .goodsChoice {
+      width: 120px;
+      height: 30px;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 12px;
+      color: #626262;
+      background-color: white;
+      border: 1px solid #a3a3a3;
+
+      &:nth-child(2) {
+        margin-left: 6px;
+      }
+    }
+
+    .goodsOrder {
+      width: 190px;
+      height: 55px;
+      padding: 0 20px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:first-child {
+        color: #3e3d3c;
+        border: 1px solid #cccccc;
+        background-color: #fff;
+
+        &:hover {
+          border: 1px solid #bdbdbd;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-left: 6px;
+        color: #fff;
+        border: 1px solid #000;
+        background-color: #000;
+
+        &:hover {
+          background-color: rgb(52, 52, 52);
+        }
+      }
+    }
+  }
 }

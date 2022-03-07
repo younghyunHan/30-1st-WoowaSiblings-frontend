@@ -6,7 +6,9 @@ function ItemDetail() {
   const [list, setList] = useState([]);
 
   const onClick = event => {
-    setList(event.target.value);
+    setList(
+      list.concat(event.target.options[event.target.selectedIndex].value)
+    );
   };
 
   return (
@@ -32,20 +34,12 @@ function ItemDetail() {
             </div>
             <div className="itemOptionBox">
               <div className="itemOptionBoxOne">옵션</div>
-              <select className="itemOptionBoxTwo">
+              <select className="itemOptionBoxTwo" onChange={onClick}>
                 <option>= 옵션 : 가격 =</option>
-                <option value="독고배달이" onClick={onClick}>
-                  독고배달이
-                </option>
-                <option value="냥이배달이" onClick={onClick}>
-                  냥이배달이
-                </option>
-                <option value="메이배달이" onClick={onClick}>
-                  메이배달이
-                </option>
-                <option value="왕배달이" onClick={onClick}>
-                  왕배달이
-                </option>
+                <option value="독고배달이">독고배달이</option>
+                <option value="냥이배달이">냥이배달이</option>
+                <option value="메이배달이">메이배달이</option>
+                <option value="왕배달이">왕배달이</option>
               </select>
             </div>
           </div>
@@ -53,7 +47,7 @@ function ItemDetail() {
             {list.map((content, index) => {
               return (
                 <div key={index}>
-                  <SelectItem content={content} />;
+                  <SelectItem content={content} />
                 </div>
               );
             })}

@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import './Cart.scss';
 import CartItemList from './CartItemList';
+import './Cart.scss';
 
 function Cart() {
   const [cartItem, setCartItem] = useState([]);
-
+  l;
   useEffect(() => {
     fetch('http://localhost:3000/data/CartItemList.json', {
       method: 'GET',
@@ -16,6 +16,13 @@ function Cart() {
         setCartItem(data);
       });
   }, []);
+
+  let totalPrice = 0;
+  for (let i = 0; i < cartItem.length; i++) {
+    totalPrice += cartItem[i].price * cartItem[i].count;
+  }
+
+  let totaDeliveryCharge = 2500;
 
   return (
     <div className="cart">
@@ -63,7 +70,10 @@ function Cart() {
               개의 상품금액
             </li>
             <li>
-              <strong className="totalGoodsPrice">{}</strong>원
+              <strong className="totalGoodsPrice">
+                {totalPrice.toLocaleString('ko-KR')}
+              </strong>
+              원
             </li>
           </ul>
           <span>
@@ -73,7 +83,10 @@ function Cart() {
           <ul>
             <li>배송비</li>
             <li>
-              <strong className="totaDeliveryCharge">0</strong>원
+              <strong className="totaDeliveryCharge">
+                {totaDeliveryCharge.toLocaleString('ko-KR')}
+              </strong>
+              원
             </li>
           </ul>
 
@@ -84,7 +97,10 @@ function Cart() {
           <ul>
             <li>합계</li>
             <li>
-              <strong className="totalSettlePrice">{}</strong>원
+              <strong className="totalSettlePrice">
+                {(totalPrice + totaDeliveryCharge).toLocaleString('ko-KR')}
+              </strong>
+              원
             </li>
           </ul>
         </div>

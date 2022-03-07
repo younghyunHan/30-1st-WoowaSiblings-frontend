@@ -36,6 +36,22 @@
       font-weight: bold;
       color: #333333;
       border-top: 1px solid #dbdbdb;
+
+      .countNumber {
+        margin-top: 4px;
+        width: 40px;
+        text-align: center;
+        padding: 0 3px;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+        outline: none;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          height: 15px;
+
+          opacity: 1;
+        }
+      }
     }
 
     .tdLast {

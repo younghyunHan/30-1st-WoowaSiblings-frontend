@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Cart.scss';
+import CartItemList from './CartItemList';
 
 function Cart() {
   const [cartItem, setCartItem] = useState([]);
@@ -11,6 +12,7 @@ function Cart() {
     })
       .then(res => res.json())
       .then(data => {
+        //스트링파이 안함 해야함
         setCartItem(data);
       });
   }, []);
@@ -34,30 +36,18 @@ function Cart() {
           </tr>
         </thead>
         <tbody>
-          {cartItem.map(el => {
-            return (
-              <tr key={el.id}>
-                <td>
-                  <input className="inputCheck" type="checkbox" />
-                </td>
-                <td>
-                  <div className="cartList">
-                    <img alt="" width={40} src="{el.thumbnail_image}"></img>
-                    <h3>{el.name}</h3>
-                  </div>
-                </td>
-                <td>{el.count}개</td>
-                <td>{el.price * el.count}원</td>
-                {el.id === 1 && (
-                  <td rowSpan={cartItem.length} className="tdLast">
-                    <p>기본 배송비</p>
-                    <p>0원</p>
-                    <p>택배-선결제</p>
-                  </td>
-                )}
-              </tr>
-            );
-          })}
+          {cartItem.map((el, idx) => (
+            <CartItemList
+              id={el.id}
+              key={el.id}
+              name={el.name}
+              price={el.price}
+              count={el.count}
+              image={el.thumbnail_image}
+              cartItem={cartItem}
+              setCartItem={setCartItem}
+            />
+          ))}
         </tbody>
       </table>
       <div className="goToShopBox">
@@ -94,7 +84,7 @@ function Cart() {
           <ul>
             <li>합계</li>
             <li>
-              <strong className="totalSettlePrice">219,300</strong>원
+              <strong className="totalSettlePrice">{}</strong>원
             </li>
           </ul>
         </div>

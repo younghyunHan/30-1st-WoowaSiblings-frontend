@@ -4,8 +4,8 @@
 .itemList {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 300px;
-  padding-bottom: 100px;
+  padding: 300px 0 100px 0;
+
   line-height: 1.5;
   font-family: 'Noto Sans';
 
@@ -24,68 +24,66 @@
         line-height: 1.5;
         padding-right: 20px;
 
-        .galleryItem {
-          .itemPhotoBox {
-            margin: 0px;
-            width: 280px;
-            height: 350px;
-            overflow: hidden;
+        .itemPhotoBox {
+          margin: 0px;
+          width: 280px;
+          height: 350px;
+          overflow: hidden;
 
-            .itemPageMove {
-              .listImage {
-                width: 100%;
-                height: 100%;
-                object-fit: fill;
-              }
+          .itemPageMove {
+            .listImage {
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
             }
           }
+        }
 
-          .itemDiscountRate {
-            margin-top: 10px;
-            color: $saleFontColor;
-            font-size: 20px;
-            font-weight: 800;
-            line-height: 30px;
-            font-family: $saleFontFamily, sans-serif;
+        .itemDiscountRate {
+          margin-top: 10px;
+          color: $saleFontColor;
+          font-size: 20px;
+          font-weight: 800;
+          line-height: 30px;
+          font-family: $saleFontFamily, sans-serif;
+          text-decoration: none;
+          line-height: 2;
+        }
+
+        .itemTitleBox {
+          line-height: 2.5;
+
+          .itemTitleBoxName {
+            padding-top: 3px;
             text-decoration: none;
-            line-height: 2;
+            color: black;
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+
+        .itemMoneyBox {
+          .originalPrice {
+            display: block;
+            color: #888;
+            text-decoration: line-through;
+            text-decoration-style: solid;
+            line-height: 0.5;
+            font-size: 12px;
+            font-family: $saleFontFamily;
           }
 
-          .itemTitleBox {
-            line-height: 2.5;
-
-            .itemTitleBoxName {
-              padding-top: 3px;
-              text-decoration: none;
-              color: black;
-              font-size: 16px;
-              font-weight: normal;
-            }
+          .priceBig {
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            text-decoration-style: solid;
           }
-
-          .itemMoneyBox {
-            .originalPrice {
-              display: block;
-              color: #888;
-              text-decoration: line-through;
-              text-decoration-style: solid;
-              line-height: 0.5;
-              font-size: 12px;
-              font-family: $saleFontFamily;
-            }
-
-            .priceBig {
-              color: black;
-              font-size: 20px;
-              font-weight: bold;
-              text-decoration: none;
-              text-decoration-style: solid;
-            }
-            .discountPrice {
-              font-family: $saleFontFamily, sans-serif;
-              font-weight: bold;
-              font-size: 20px;
-            }
+          .discountPrice {
+            font-family: $saleFontFamily, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
           }
         }
       }

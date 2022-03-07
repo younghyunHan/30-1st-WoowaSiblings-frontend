@@ -19,40 +19,38 @@ function ItemList() {
           {list.map(content => {
             return (
               <li key={content.id} className="listGallery">
-                <div className="galleryItem">
-                  <div className="itemPhotoBox">
-                    <a href="#" className="itemPageMove">
-                      <img
-                        className="listImage"
-                        src={content.thumbnail_image}
-                        alt="listItem"
-                      />
-                    </a>
-                  </div>
+                <div className="itemPhotoBox">
+                  <a href="#" className="itemPageMove">
+                    <img
+                      className="listImage"
+                      src={content.thumbnail_image}
+                      alt="listItem"
+                    />
+                  </a>
+                </div>
+                {content.discount_rate && (
                   <div className="itemDiscountRate">
-                    {content.discount_rate === ''
-                      ? ''
-                      : `${content.discount_rate * 100}%`}
+                    {content.discount_rate * 100}%
                   </div>
-                  <div className="itemTitleBox">
-                    <a href="#" className="itemTitleBoxName">
-                      <span>{content.name}</span>
-                    </a>
-                  </div>
-                  <div className="itemMoneyBox">
-                    <span
-                      className={`originalPrice ${
-                        content.discount_rate ? '' : 'priceBig'
-                      }`}
-                    >
-                      {content.price}원
-                    </span>
+                )}
+                <div className="itemTitleBox">
+                  <a href="#" className="itemTitleBoxName">
+                    <span>{content.name}</span>
+                  </a>
+                </div>
+                <div className="itemMoneyBox">
+                  <span
+                    className={`originalPrice ${
+                      content.discount_rate ? '' : 'priceBig'
+                    }`}
+                  >
+                    {content.price}원
+                  </span>
+                  {content.discount_rate && (
                     <span className="discountPrice">
-                      {content.discount_rate
-                        ? `${content.discount_price}원`
-                        : ''}
+                      {content.discount_price}원
                     </span>
-                  </div>
+                  )}
                 </div>
               </li>
             );

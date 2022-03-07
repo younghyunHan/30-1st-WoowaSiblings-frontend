@@ -26,13 +26,12 @@ function Login() {
       .then(data => {
         if (data.ACCESS_TOKEN) {
           localStorage.setItem('token', data.ACCESS_TOKEN);
-          navigate('/main');
+          navigate('/item-list');
         } else if (data.message === 'INVALID_USER') {
           alert('id와 password를 확인해주세요!!');
         }
       });
   };
-  //alert("")
 
   return (
     <div className="login">

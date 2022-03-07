@@ -23,7 +23,7 @@ function Sign() {
       .then(response => response.json())
       .then(data => {
         if (data.message === 'SUCCESS') {
-          navigate('/');
+          navigate('/item-list');
         } else if (data.message === 'INVALID_USER') {
           alert('유효한 id입니다.');
         }

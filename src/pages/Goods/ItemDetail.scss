@@ -43,6 +43,11 @@
             font-size: 20px;
             font-weight: 600;
           }
+
+          .itemPriceThree {
+            font-size: 18px;
+            text-decoration: line-through;
+          }
         }
 
         .disCountPrice {
@@ -78,31 +83,8 @@
           }
 
           .itemDeliveryTwo {
-            font-size: 16px;
-          }
-        }
-
-        .itemOptionBox {
-          display: flex;
-          align-items: center;
-          width: 100%;
-          margin: 5px 0 0 0;
-          padding: 10px 0 5px 0;
-
-          .itemOptionBoxOne {
-            margin: 0 50px 0 5px;
             font-size: 18px;
-            color: #717171;
-            font-weight: 600;
-            width: 100px;
-          }
-
-          .itemOptionBoxTwo {
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #717171;
-            font-size: 15px;
-            color: #717171;
+            font-family: 'Noto sans';
           }
         }
       }

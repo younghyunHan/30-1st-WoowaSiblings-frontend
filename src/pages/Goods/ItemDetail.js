@@ -5,12 +5,6 @@ import './ItemDetail.scss';
 function ItemDetail() {
   const [list, setList] = useState([]);
 
-  const onClick = event => {
-    setList(
-      list.concat(event.target.options[event.target.selectedIndex].value)
-    );
-  };
-
   return (
     <div className="itemDetail">
       <div className="itemDetailContents">
@@ -24,11 +18,19 @@ function ItemDetail() {
           <div className="itemDetailList">
             <div className="itemPrice">
               <div className="itemPriceOne">정가 </div>
-              <span className="itemPriceTwo">3000원</span>
+              {/* <span
+                className={`itemPriceTwo ${
+                  content.discount_price ? itemPriceThree : ''
+                }`}
+              >
+                `${content.price.toLocaleString('ko-KR')}원`
+              </span> */}
             </div>
             <div className="disCountPrice">
               <div className="itemDiscountPriceOne">할인가</div>
-              <span className="itemDiscountPriceTwo">100원</span>
+              <span className="itemDiscountPriceTwo">
+                {/* {content.discount_price ? `${content.discount_price.toLocaleString('ko-KR')}원` : ''} */}
+              </span>
             </div>
             <div className="itemDelivery">
               <div className="itemDeliveryOne">배송정보</div>
@@ -36,9 +38,9 @@ function ItemDetail() {
                 배송이 힘들어요... 찾으러 오세요
               </span>
             </div>
-            <div className="itemOptionBox">
-              <div className="itemOptionBoxOne">옵션</div>
-            </div>
+          </div>
+          <div className="selectItem">
+            <SelectItem />
           </div>
           <div className="totalAmount">
             <div className="totalAmountOne">총 합계금액</div>

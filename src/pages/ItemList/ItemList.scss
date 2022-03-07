@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Subrayada&family=Montserrat:wght@800&family=Nanum+Gothic&family=Noto+Sans&family=Open+Sans&display=swap');
+@import '../../styles/variables.scss';
 
 .itemList {
   width: 1200px;
@@ -6,6 +7,7 @@
   padding-top: 300px;
   padding-bottom: 100px;
   line-height: 1.5;
+  font-family: 'Noto Sans';
 
   .itemListContent {
     width: 100%;
@@ -20,7 +22,7 @@
         margin: 20px 0px;
         list-style: none;
         line-height: 1.5;
-        padding: 0 10px;
+        padding-right: 20px;
 
         .galleryItem {
           .itemPhotoBox {
@@ -39,17 +41,19 @@
           }
 
           .itemDiscountRate {
-            color: rgb(255, 99, 80);
+            margin-top: 10px;
+            color: $saleFontColor;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 800;
             line-height: 30px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: $saleFontFamily, sans-serif;
             text-decoration: none;
             line-height: 2;
           }
 
           .itemTitleBox {
             line-height: 2.5;
+
             .itemTitleBoxName {
               text-decoration: none;
               color: black;
@@ -65,8 +69,9 @@
               color: #888;
               text-decoration: line-through;
               text-decoration-style: solid;
-              line-height: 1;
+              line-height: 0.5;
               font-size: 12px;
+              font-family: $saleFontFamily;
             }
 
             .priceBig {
@@ -77,7 +82,9 @@
               text-decoration-style: solid;
             }
             .discountPrice {
-              font-family: 'Montserrat', sans-serif;
+              font-family: $saleFontFamily, sans-serif;
+              font-weight: bold;
+              font-size: 20px;
             }
           }
         }

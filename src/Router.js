@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Login from './pages/Login/Login';
+import Sign from './pages/Sign/Sign';
 import Cart from './pages/Cart/Cart';
 import ItemList from './pages/ItemList/ItemList';
 import Nav from './components/Nav/Nav';
@@ -13,6 +14,7 @@ function Router() {
       <Nav />
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/sign" element={<Sign />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/item-list" element={<ItemList />} />
       </Routes>

@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.sign {
+  padding: 300px 0 200px;
+  font-family: 'Noto Sans';
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .title {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .signBox {
+    margin: 0 auto;
+    width: 300px;
+
+    .inputText {
+      margin-bottom: 12px;
+      width: 100%;
+      height: 50px;
+      border: none;
+      border-bottom: 1px solid #c0c0c0;
+      font-size: 16px;
+      font-weight: 500;
+      outline: unset;
+    }
+
+    .signBtn {
+      width: 100%;
+      height: 55px;
+      background-color: $userMenuHoverColor;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #000000;
+      }
+    }
+  }
+}

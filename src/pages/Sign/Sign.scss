@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-.login {
+.sign {
   font-family: 'NotoSans';
   text-align: center;
   padding: 300px 0 100px;
@@ -15,7 +15,7 @@
     font-weight: 500;
   }
 
-  .loginBox {
+  .signBox {
     margin: 0 auto;
     width: 300px;
 
@@ -30,39 +30,18 @@
       border-bottom: 1px solid #c0c0c0;
     }
 
-    .check {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      padding-bottom: 26px;
+    .signBtn {
+      width: 100%;
+      height: 55px;
+      background-color: #333333;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
 
-      .inputCheck {
-        margin: 0;
-
-        .clickText {
-          font-size: 14px;
-          padding-left: 8px;
-          cursor: pointer;
-        }
-      }
-      .loginBtn {
-        width: 100%;
-        height: 55px;
-        background-color: #333333;
-        border: none;
-        color: white;
-        font-size: 18px;
-        font-weight: 800;
-        cursor: pointer;
-
-        &:hover {
-          background-color: #000000;
-        }
-      }
-
-      .signup {
-        margin-top: 30px;
-        color: #000000;
+      &:hover {
+        background-color: #000000;
       }
     }
   }

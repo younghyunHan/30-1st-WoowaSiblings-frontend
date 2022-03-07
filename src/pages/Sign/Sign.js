@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './Sign.scss';
+
 function Sign() {
   const [values, setValues] = useState({ id: '', password: '' });
 
@@ -23,17 +23,17 @@ function Sign() {
       .then(response => response.json())
       .then(data => {
         if (data.message === 'SUCCESS') {
-          navigate('/item-list');
+          navigate('/');
         } else if (data.message === 'INVALID_USER') {
-          alert('유효한 id입니다.');
+          alert('유효한 유저입니다.');
         }
       });
   };
 
   return (
-    <div className="login">
+    <div className="sign">
       <h2 className="title">회원 가입</h2>
-      <div className="loginBox">
+      <div className="signBox">
         <form>
           <input
             onChange={handleChange}
@@ -49,7 +49,7 @@ function Sign() {
             type="password"
           />
         </form>
-        <button onClick={goToLogin} className="loginBtn">
+        <button onClick={goToLogin} className="signBtn">
           회원가입
         </button>
       </div>

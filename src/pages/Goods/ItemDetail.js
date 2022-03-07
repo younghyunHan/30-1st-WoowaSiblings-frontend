@@ -5,7 +5,7 @@ import './ItemDetail.scss';
 function ItemDetail() {
   const [list, setList] = useState([]);
 
-  const onChange = event => {
+  const onClick = event => {
     setList(event.target.value);
   };
 
@@ -32,26 +32,30 @@ function ItemDetail() {
             </div>
             <div className="itemOptionBox">
               <div className="itemOptionBoxOne">옵션</div>
-              <select className="itemOptionBoxTwo" onChange={addSelectList}>
-                <option value="">= 옵션 : 가격 =</option>
-                <option value="" onChange={onChange}>
+              <select className="itemOptionBoxTwo">
+                <option>= 옵션 : 가격 =</option>
+                <option value="독고배달이" onClick={onClick}>
                   독고배달이
                 </option>
-                <option value="" onChange={onChange}>
+                <option value="냥이배달이" onClick={onClick}>
                   냥이배달이
                 </option>
-                <option value="" onChange={onChange}>
+                <option value="메이배달이" onClick={onClick}>
                   메이배달이
                 </option>
-                <option value="" onChange={onChange}>
+                <option value="왕배달이" onClick={onClick}>
                   왕배달이
                 </option>
               </select>
             </div>
           </div>
           <div className="selectItemList">
-            {list.map(content => {
-              return <SelectItem key={content.id} />;
+            {list.map((content, index) => {
+              return (
+                <div key={index}>
+                  <SelectItem content={content} />;
+                </div>
+              );
             })}
           </div>
           <div className="totalAmount">

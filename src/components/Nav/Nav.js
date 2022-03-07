@@ -1,27 +1,11 @@
-import './Nav.scss';
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import USER_MENU_LIST from './NavData';
+import './Nav.scss';
 
 function Nav() {
   const [cartNumber, setCartNumber] = useState(0);
 
-  const USER_MENU_LIST = [
-    {
-      id: 1,
-      userMenu: '로그인',
-      movePath: '/',
-    },
-    {
-      id: 2,
-      userMenu: '회원가입',
-      movePath: '/sign',
-    },
-    {
-      id: 3,
-      userMenu: '장바구니',
-      movePath: '/cart',
-    },
-  ];
   return (
     <div className="navWraper">
       <nav className="nav">

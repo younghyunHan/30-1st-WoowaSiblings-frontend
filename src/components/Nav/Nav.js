@@ -40,7 +40,7 @@ function Nav() {
                 );
               })}
             </ul>
-            <Link to={'/cart'} className="cartNumber">
+            <Link to="/cart" className="cartNumber">
               {cartNumber}
             </Link>
           </div>

@@ -10,9 +10,9 @@
   font-family: 'Noto Sans';
 
   .itemListContent {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
 
     .itemListCotentGallery {
       display: flex;
@@ -55,11 +55,11 @@
             line-height: 2.5;
 
             .itemTitleBoxName {
+              padding-top: 3px;
               text-decoration: none;
               color: black;
               font-size: 16px;
               font-weight: normal;
-              padding-top: 3px;
             }
           }
 

@@ -23,34 +23,22 @@ function ItemDetail() {
           <h3 className="itemDetailTitle">배달이 친구들</h3>
           <div className="itemDetailList">
             <div className="itemPrice">
-              <div className="itemPriceOne">판매가격 </div>
+              <div className="itemPriceOne">정가 </div>
               <span className="itemPriceTwo">3000원</span>
             </div>
+            <div className="disCountPrice">
+              <div className="itemDiscountPriceOne">할인가</div>
+              <span className="itemDiscountPriceTwo">100원</span>
+            </div>
             <div className="itemDelivery">
-              <div className="itemDeliveryOne">배송정보 </div>
+              <div className="itemDeliveryOne">배송정보</div>
               <span className="itemDeliveryTwo">
                 배송이 힘들어요... 찾으러 오세요
               </span>
             </div>
             <div className="itemOptionBox">
               <div className="itemOptionBoxOne">옵션</div>
-              <select className="itemOptionBoxTwo" onChange={onClick}>
-                <option>= 옵션 : 가격 =</option>
-                <option value="독고배달이">독고배달이</option>
-                <option value="냥이배달이">냥이배달이</option>
-                <option value="메이배달이">메이배달이</option>
-                <option value="왕배달이">왕배달이</option>
-              </select>
             </div>
-          </div>
-          <div className="selectItemList">
-            {list.map((content, index) => {
-              return (
-                <div key={index}>
-                  <SelectItem content={content} />
-                </div>
-              );
-            })}
           </div>
           <div className="totalAmount">
             <div className="totalAmountOne">총 합계금액</div>

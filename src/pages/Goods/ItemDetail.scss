@@ -33,13 +33,32 @@
           padding: 4px 0;
 
           .itemPriceOne {
-            margin: 0 50px 0 5px;
+            margin: 0 89px 0 5px;
             font-size: 18px;
             color: #717171;
             font-weight: 600;
           }
 
           .itemPriceTwo {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+
+        .disCountPrice {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 4px 0;
+
+          .itemDiscountPriceOne {
+            margin: 0 70px 0 5px;
+            font-size: 18px;
+            color: #717171;
+            font-weight: 600;
+          }
+
+          .itemDiscountPriceTwo {
             font-size: 20px;
             font-weight: 600;
           }

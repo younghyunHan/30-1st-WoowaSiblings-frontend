@@ -25,7 +25,7 @@ function Sign() {
         if (data.message === 'SUCCESS') {
           navigate('/');
         } else if (data.message === 'INVALID_USER') {
-          alert('유효한 유저입니다.');
+          alert('이미 존재하는 유저입니다.');
         }
       });
   };

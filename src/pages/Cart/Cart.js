@@ -1,28 +1,91 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import CartItemList from './CartItemList';
+import CartItem from './CartItem';
 import './Cart.scss';
 
 function Cart() {
-  const [cartItem, setCartItem] = useState([]);
-  l;
+  // TODO: 체크박스;
+  const [items, setItems] = useState([]);
+  // const [checkedItems, setCheckedItems] = useState(new Set());
+  // const [isAllChecked, setIsAllChecked] = useState(false);
+  // const [bChecked, setbChecked] = useState(false);
+  // const ref = useRef();
+
   useEffect(() => {
-    fetch('http://localhost:3000/data/CartItemList.json', {
+    fetch('http://10.58.0.75:8000/orders/carts/13', {
       method: 'GET',
+      headers: {
+        Authorization: localStorage.getItem('token'),
+      },
     })
       .then(res => res.json())
       .then(data => {
-        //스트링파이 안함 해야함
-        setCartItem(data);
+        setItems(data.results);
+        console.log(items);
       });
   }, []);
+  //  TODO 체크박스
+  // const changeItemOptionSubmit = id => {
+  //   const changeItem = items.map(items => {
+  //     if (items.id === id) {
+  //       if (count > 0)
+  //         return { ...items, count: count, bChecked: true };
+  //       else return { ...items, count: count };
+  //     } else return items;
+  //   });
+  //   setItems(changeItem);
+
+  //   fetch(`${BASE_URL}cart/${item .cart_id}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //       Authorization: localStorage.getItem('token'),
+  //     },
+  //     body: JSON.stringify({
+  //       cart_id: Cart.id,
+  //       quantity: item.quantity,
+  //     }),
+  //   })
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       if (res.result.message === 'SUCCESS') {
+  //         fetch(`${BASE_URL}cart`, {
+  //           method: 'GET',
+  //           headers: {
+  //             Authorization: localsStorage.getItem('token'),
+  //           },
+  //         })
+  //           .then(res => res.json())
+  //           .then(res => setItems({ ...items, qty: res.count }));
+  //       }
+  //     });
+
+  //   onClose();
+  // };
+  // const allCheckedHandler = isChecked => {
+  //   if (isChecked) {
+  //     setCheckedItems(new Set(items.map(({ id }) => id)));
+  //     setIsAllChecked(true);
+  //   } else if (!isChecked) {
+  //     checkedItems.clear();
+  //     setCheckedItems(setCheckedItems);
+  //     setIsAllChecked(false);
+  //   }
+  // };
+
+  // const checkedItemHandler = (id, isChecked) => {
+  //   if (isChecked) {
+  //     checkedItems.add(id);
+  //     setCheckedItems(checkedItems);
+  //   } else if (!isChecked && checkedItems.has(id)) {
+  //     checkedItems.delete(id);
+  //     setCheckedItems(checkedItems);
+  //   }
+  // };
 
   let totalPrice = 0;
-  for (let i = 0; i < cartItem.length; i++) {
-    totalPrice += cartItem[i].price * cartItem[i].count;
+  for (let i = 0; i < items.length; i++) {
+    totalPrice += items[i].total_price;
   }
-
-  let totaDeliveryCharge = 2500;
 
   return (
     <div className="cart">
@@ -43,18 +106,9 @@ function Cart() {
           </tr>
         </thead>
         <tbody>
-          {cartItem.map((el, idx) => (
-            <CartItemList
-              id={el.id}
-              key={el.id}
-              name={el.name}
-              price={el.price}
-              count={el.count}
-              image={el.thumbnail_image}
-              cartItem={cartItem}
-              setCartItem={setCartItem}
-            />
-          ))}
+          {items.map(item => {
+            return <CartItem item={item} key={item.id} items={items} />;
+          })}
         </tbody>
       </table>
       <div className="goToShopBox">
@@ -66,12 +120,13 @@ function Cart() {
         <div className="totalPriceList">
           <ul>
             <li>
-              총 <strong className="totalCount">{cartItem.length}</strong>
+              총 <strong className="totalCount">{items.length}</strong>
               개의 상품금액
             </li>
             <li>
               <strong className="totalGoodsPrice">
-                {totalPrice.toLocaleString('ko-KR')}
+                {totalPrice}
+                {/* {totalPrice.toLocaleString('ko-KR')} */}
               </strong>
               원
             </li>
@@ -84,7 +139,7 @@ function Cart() {
             <li>배송비</li>
             <li>
               <strong className="totaDeliveryCharge">
-                {totaDeliveryCharge.toLocaleString('ko-KR')}
+                0{/* {totaDeliveryCharge.toLocaleString('ko-KR')} */}
               </strong>
               원
             </li>
@@ -97,10 +152,7 @@ function Cart() {
           <ul>
             <li>합계</li>
             <li>
-              <strong className="totalSettlePrice">
-                {(totalPrice + totaDeliveryCharge).toLocaleString('ko-KR')}
-              </strong>
-              원
+              <strong className="totalSettlePrice">{totalPrice}</strong>원
             </li>
           </ul>
         </div>

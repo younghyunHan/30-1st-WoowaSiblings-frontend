@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './ItemList.scss';
 
 function ItemList() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch('http://10.58.0.75:8000/products')
+    fetch('http://localhost:3000/data/listData.json')
       .then(res => res.json())
       .then(data => {
         setList(data.results);
@@ -20,13 +21,13 @@ function ItemList() {
             return (
               <li key={content.id} className="listGallery">
                 <div className="itemPhotoBox">
-                  <a href="#" className="itemPageMove">
+                  <Link to="/" className="itemPageMove">
                     <img
                       className="listImage"
                       src={content.thumbnail_image}
                       alt="listItem"
                     />
-                  </a>
+                  </Link>
                 </div>
                 {content.discount_rate && (
                   <div className="itemDiscountRate">

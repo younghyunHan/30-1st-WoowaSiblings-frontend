@@ -1,10 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Sign.scss';
 
-import { useNavigate, Link } from 'react-router-dom';
-
-import './Login.scss';
-
-function Login() {
+function Sign() {
   const [values, setValues] = useState({ id: '', password: '' });
 
   const navigate = useNavigate();
@@ -14,8 +12,8 @@ function Login() {
     setValues({ ...values, [name]: value });
   };
 
-  const goToMain = () => {
-    fetch('http://10.58.2.78:8000/users/signin', {
+  const goToLogin = () => {
+    fetch('http://10.58.2.78:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,
@@ -24,19 +22,18 @@ function Login() {
     })
       .then(response => response.json())
       .then(data => {
-        if (data.ACCESS_TOKEN) {
-          localStorage.setItem('token', data.ACCESS_TOKEN);
-          navigate('/item-list');
+        if (data.message === 'SUCCESS') {
+          navigate('/');
         } else if (data.message === 'INVALID_USER') {
-          alert('id와 password를 확인해주세요!!');
+          alert('이미 존재하는 유저입니다.');
         }
       });
   };
 
   return (
-    <div className="login">
-      <h2 className="title">회원 로그인</h2>
-      <div className="loginBox">
+    <div className="sign">
+      <h2 className="title">회원 가입</h2>
+      <div className="signBox">
         <form>
           <input
             onChange={handleChange}
@@ -51,24 +48,13 @@ function Login() {
             placeholder="비밀번호"
             type="password"
           />
-          <div className="check">
-            <input className="inputCheck" type="checkbox" id="c_box" />
-            <label className="checkText" for="c_box" />
-            <label className="clickText" for="c_box">
-              아이디 저장
-            </label>
-          </div>
         </form>
-        <button onClick={goToMain} className="loginBtn">
-          로그인
+        <button onClick={goToLogin} className="signBtn">
+          회원가입
         </button>
-
-        <Link to="/sign">
-          <h3 className="signup">회원가입</h3>
-        </Link>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Sign;

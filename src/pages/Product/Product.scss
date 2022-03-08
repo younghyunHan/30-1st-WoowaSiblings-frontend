@@ -1,50 +1,50 @@
-.itemDetail {
+.product {
   padding-top: 300px;
   padding-bottom: 100px;
   line-height: 1.5;
 
-  .itemDetailContents {
+  .productContents {
     width: 1200px;
     margin: 0 auto;
     display: flex;
     padding: 0 40px;
 
-    .itemDetailImage {
+    .productImage {
       width: 400px;
       margin-right: 100px;
     }
 
-    .itemInfoBox {
+    .productInfoBox {
       width: 500px;
 
-      .itemDetailTitle {
+      .productTitle {
         padding-bottom: 30px;
         font-weight: 600;
         font-size: 30px;
       }
 
-      .itemDetailList {
+      .productList {
         margin: 10px 0 20px 0;
 
-        .itemPrice {
+        .productPrice {
           display: flex;
           align-items: center;
           width: 100%;
           padding: 4px 0;
 
-          .itemPriceOne {
+          .productPriceOne {
             margin: 0 89px 0 5px;
             font-size: 18px;
             color: #717171;
             font-weight: 600;
           }
 
-          .itemPriceTwo {
+          .productPriceTwo {
             font-size: 20px;
             font-weight: 600;
           }
 
-          .itemPriceThree {
+          .productPriceThree {
             font-size: 18px;
             text-decoration: line-through;
           }
@@ -56,33 +56,33 @@
           width: 100%;
           padding: 4px 0;
 
-          .itemDiscountPriceOne {
+          .productDiscountPriceOne {
             margin: 0 70px 0 5px;
             font-size: 18px;
             color: #717171;
             font-weight: 600;
           }
 
-          .itemDiscountPriceTwo {
+          .productDiscountPriceTwo {
             font-size: 20px;
             font-weight: 600;
           }
         }
 
-        .itemDelivery {
+        .productDelivery {
           display: flex;
           align-items: center;
           width: 100%;
           padding: 4px 0;
 
-          .itemDeliveryOne {
+          .productDeliveryOne {
             margin: 0 50px 0 5px;
             font-size: 18px;
             color: #717171;
             font-weight: 600;
           }
 
-          .itemDeliveryTwo {
+          .productDeliveryTwo {
             font-size: 18px;
             font-family: 'Noto sans';
           }

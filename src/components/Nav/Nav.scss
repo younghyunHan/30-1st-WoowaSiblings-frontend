@@ -1,0 +1,158 @@
+@import '../../styles/variables.scss';
+
+.navWraper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: $themeBorder;
+
+  .nav {
+    font-family: 'Noto Sans';
+
+    .topBar {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      height: 1px;
+      background-color: $grayBackgroundColor;
+    }
+
+    .navWarp {
+      margin: 0 auto;
+      max-width: 1200px;
+      min-width: 1200px;
+
+      .userMenu {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-right: 70px;
+
+        .userMenuText {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          width: 100%;
+          max-width: 1200px;
+          height: 40px;
+
+          li {
+            display: flex;
+            align-items: center;
+
+            .txtBar {
+              display: inline-block;
+              margin: 0 10px 3px;
+              width: 1px;
+              height: 8px;
+              background-color: $grayBackgroundColor;
+            }
+
+            :hover {
+              color: $userMenuColor;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: $userMenuHoverColor;
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+
+        .cartNumber {
+          margin-left: 4px;
+          text-decoration: none;
+          font-size: 10px;
+          font-weight: bold;
+          color: $baeminPointColor;
+        }
+      }
+
+      .middle {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        min-width: 1200px;
+        height: 103px;
+
+        .logo {
+          width: 156px;
+        }
+
+        .search {
+          display: flex;
+
+          .searchBox {
+            position: absolute;
+            right: 10px;
+            display: flex;
+            margin-right: 30px;
+            width: 250px;
+            border-bottom: 1px solid black;
+
+            input {
+              padding: 0;
+              margin-bottom: 3px;
+              width: 100%;
+              border: none;
+              outline: none;
+              font-size: 14px;
+            }
+          }
+
+          .searchImg {
+            margin-bottom: 3px;
+            margin-left: 10px;
+            width: 18px;
+          }
+        }
+      }
+
+      .category {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 55px;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          text-align: end;
+
+          li {
+            font-weight: 500;
+            font-size: 16px;
+            color: #333333;
+
+            :hover {
+              color: $userMenuColor;
+            }
+
+            a {
+              position: absolute;
+              font-weight: 700;
+              text-decoration: none;
+              color: $userMenuColor;
+            }
+
+            .active {
+              position: absolute;
+              height: 27px;
+              border-bottom: 2px solid $baeminPointColor;
+              font-weight: bold;
+              color: $baeminPointColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

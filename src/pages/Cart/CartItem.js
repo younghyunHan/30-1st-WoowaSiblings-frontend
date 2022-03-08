@@ -24,7 +24,6 @@ function CartItem({ item }) {
   // const allCheckHandler = () => setbChecked(isAllChecked);
   // useEffect(() => allCheckHandler(), [isAllChecked]);
 
-  console.log(price);
   return (
     <tr>
       <td>
@@ -42,8 +41,8 @@ function CartItem({ item }) {
         <input min="1" value={quantity} type="number" className="countNumber" />
         <button className="countNumberBtn">변경</button> */}
       </td>
-      <td>{price}원</td>
-      <td rowSpan={items.length} className="tdLast">
+      <td>{total_price.toLocaleString()}원</td>
+      <td rowSpan={item.length} className="tdLast">
         <p>기본 배송비</p>
         <p>0원</p>
         <p>택배-선결제</p>

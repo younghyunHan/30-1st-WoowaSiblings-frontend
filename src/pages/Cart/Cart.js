@@ -12,7 +12,7 @@ function Cart() {
   // const ref = useRef();
 
   useEffect(() => {
-    fetch('http://10.58.0.75:8000/orders/carts/13', {
+    fetch('http://10.58.0.75:8000/orders/carts', {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -112,7 +112,7 @@ function Cart() {
         </tbody>
       </table>
       <div className="goToShopBox">
-        <Link to={'/item-list'} className="goToShop">
+        <Link to="/item-list" className="goToShop">
           &lt; 쇼핑 계속하기
         </Link>
       </div>
@@ -125,7 +125,7 @@ function Cart() {
             </li>
             <li>
               <strong className="totalGoodsPrice">
-                {totalPrice}
+                {totalPrice.toLocaleString()}
                 {/* {totalPrice.toLocaleString('ko-KR')} */}
               </strong>
               원
@@ -152,7 +152,10 @@ function Cart() {
           <ul>
             <li>합계</li>
             <li>
-              <strong className="totalSettlePrice">{totalPrice}</strong>원
+              <strong className="totalSettlePrice">
+                {totalPrice.toLocaleString()}
+              </strong>
+              원
             </li>
           </ul>
         </div>

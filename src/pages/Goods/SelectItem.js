@@ -1,76 +1,56 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SelectItem.scss';
 
-function SelectItem({ items }) {
+function SelectItem({ content }) {
+  console.log(content);
+
   const [count, setCount] = useState(0);
-  const maxCount = 10;
-  const minCount = 0;
   // const oldPrice = items.result.old_price;
   // const resultPrice = oldPrice * count;
+  // const { name, price, thumbnail_image_url, quantity, option } = item;
+  // const [quantityNum, setQuantityNum] = useState(quantity);
+  const navigate = useNavigate();
 
-  const handleCount = event => {
-    if (event > maxCount) {
-      setCount(maxCount);
-    } else if (event < minCount) {
-      setCount(minCount);
-    } else setCount(event);
-  };
+  // const handleCount = event => {
+  //   if (event > maxCount) {
+  //     setCount(maxCount);
+  //   } else if (event < minCount) {
+  //     setCount(minCount);
+  //   } else setCount(event);
+  // };
 
-  const onIncreaseCount = () => {
-    if (count < maxCount) setCount(count + 1);
-    else if (count > maxCount) setCount(maxCount);
-  };
+  // const onIncreaseCount = () => {
+  //   if (count < maxCount) setCount(count + 1);
+  //   else if (count > maxCount) setCount(maxCount);
+  // };
 
-  const onDecreaseCount = () => {
-    if (count > minCount) setCount(count - 1);
-    else if (count === 0) alert('최소 1개 이상 구매하셔아 합니다');
+  // const onDecreaseCount = () => {
+  //   if (count > minCount) setCount(count - 1);
+  //   else if (count === 0) alert('최소 1개 이상 구매하셔아 합니다');
+  // };
+
+  const handleQuantityInput = e => {
+    // setQuantityNum(Number(e.target.value)); // value는 string
   };
 
   return (
-    <form>
-      <div className="selectItemArea">
-        <div className="selectItemDisplayArea">
-          {/* <span className="itemName">{items.result.title}</span> */}
-          <div className="itemPrice">
-            <span className="itemCount">
-              <input
-                className="itemCountOne"
-                value={count}
-                onChange={event => {
-                  handleCount(event.target.value);
-                }}
-              />
-              <span>
-                <div className="buttonBox">
-                  <input
-                    className="upButton"
-                    type="button"
-                    onClick={() => onIncreaseCount()}
-                    title="증가"
-                    value="&#8896;"
-                  />
-                  <input
-                    className="downButton"
-                    type="button"
-                    onClick={() => onDecreaseCount()}
-                    title="감소"
-                    value="&#8897;"
-                  />
-                </div>
-              </span>
-            </span>
-            {/* <em>{resultPrice}원</em> */}
-          </div>
-          <div className="deleteButton">
-            <button // onClick={() => { //   setIsShow(false); // }}
-              type="button"
-            >
-              &#x2613;
-            </button>
-          </div>
+    content !== null && (
+      <div className="selectItem">
+        <div className="itemName">{content[0].name}</div>
+        <div className="countPrice">
+          <input
+            type="number"
+            min="1"
+            max="120"
+            // value={quantityNum}
+            // onChange={handleQuantityInput}
+            className="numberInput"
+          />
+          <div className="itemPrice">{content[0].price}.to</div>
         </div>
       </div>
-    </form>
+    )
   );
 }
 

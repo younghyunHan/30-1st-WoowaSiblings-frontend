@@ -1,0 +1,25 @@
+.selectItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 60px;
+  padding: 0px 20px;
+  margin-bottom: 130px;
+  background-color: #f5f5f5;
+
+  .countPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+
+    .numberInput {
+      width: 64px;
+      height: 32px;
+      border: 1px solid #cccccc;
+      padding: 0 10px;
+      position: center;
+    }
+  }
+}

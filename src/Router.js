@@ -13,6 +13,7 @@ function Router() {
     <BrowserRouter>
       <Nav />
       <Routes>
+        <Route path="/"></Route>
         <Route path="/" element={<Login />} />
         <Route path="/sign" element={<Sign />} />
         <Route path="/cart" element={<Cart />} />
@@ -22,5 +23,4 @@ function Router() {
     </BrowserRouter>
   );
 }
-
 export default Router;

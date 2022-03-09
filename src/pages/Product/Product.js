@@ -23,27 +23,29 @@ function Product() {
         method: 'POST',
         headers: { Authorization: token },
         body: JSON.stringify({
-          quantity: Number(goToBack),
+          quantity: goToBack,
           product_id: `${params.id}`,
         }),
       })
         .then(response => response.json())
         .then(result => {
-          if (result.message === 'CREATE_CART') {
-            navigate('/cart');
-          } else if (result.message === 'ADD_QUANTITY_TO_EXISTED_CART') {
-            navigate('/cart');
+          if (
+            result.message === 'CREATE_CART' ||
+            'ADD_QUANTITY_TO_EXISTED_CART'
+          ) {
+            window.confirm(
+              '상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?'
+            ) && navigate('/cart');
+          } else {
+            alert('다시 시도해주세요!');
           }
         });
-    } else if (token === '') {
-      alert('로그인이 필요합니다');
-      navigate('/');
     }
   };
 
   const handleAmountValue = event => {
-    setAmount(event.target.value);
-    setGoToBack(event.target.value);
+    setAmount(Number(event.target.value));
+    setGoToBack(Number(event.target.value));
   };
 
   return (

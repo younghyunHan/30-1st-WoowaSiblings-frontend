@@ -8,7 +8,7 @@
   border-bottom: $themeBorder;
 
   .nav {
-    font-family: 'NotoSans';
+    font-family: 'Noto Sans';
 
     .topBar {
       position: absolute;
@@ -19,9 +19,9 @@
     }
 
     .navWarp {
+      margin: 0 auto;
       max-width: 1200px;
       min-width: 1200px;
-      margin: 0 auto;
 
       .userMenu {
         display: flex;
@@ -123,8 +123,8 @@
 
         ul {
           display: flex;
-          width: 100%;
           justify-content: space-around;
+          width: 100%;
           text-align: end;
 
           li {

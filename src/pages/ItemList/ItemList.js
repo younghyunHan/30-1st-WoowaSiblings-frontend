@@ -7,10 +7,10 @@ function ItemList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://10.58.0.75:8000/products')
+    fetch('/data/listData.json')
       .then(res => res.json())
       .then(data => {
-        setList(data.results);
+        setList(data);
       });
   }, []);
 
@@ -30,13 +30,11 @@ function ItemList() {
                 onClick={() => handleClick(content.id)}
               >
                 <div className="itemPhotoBox">
-                  <div className="itemPageMove">
-                    <img
-                      className="listImage"
-                      src={content.thumbnail_image}
-                      alt="listItem"
-                    />
-                  </div>
+                  <img
+                    className="listImage"
+                    src={content.image}
+                    alt="listItem"
+                  />
                 </div>
                 {content.discount_rate && (
                   <div className="itemDiscountRate">

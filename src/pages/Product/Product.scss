@@ -1,7 +1,10 @@
+@import '../../styles/variables.scss';
+
 .product {
   padding-top: 300px;
   padding-bottom: 100px;
   line-height: 1.5;
+  font-family: 'Noto Sans';
 
   .productContents {
     width: 1200px;
@@ -33,9 +36,9 @@
           padding: 4px 0;
 
           .productPriceOne {
-            margin: 0 89px 0 5px;
+            margin: 0 85px 0 5px;
             font-size: 18px;
-            color: #717171;
+            color: $userMenuColor;
             font-weight: 600;
           }
 
@@ -45,7 +48,8 @@
           }
 
           .productPriceThree {
-            font-size: 18px;
+            font-size: 15px;
+            color: $userMenuColor;
             text-decoration: line-through;
           }
         }
@@ -59,13 +63,19 @@
           .productDiscountPriceOne {
             margin: 0 70px 0 5px;
             font-size: 18px;
-            color: #717171;
+            color: $userMenuColor;
             font-weight: 600;
           }
 
           .productDiscountPriceTwo {
             font-size: 20px;
             font-weight: 600;
+          }
+
+          .productDiscountPriceThree {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: $saleFontFamily;
           }
         }
 
@@ -76,9 +86,9 @@
           padding: 4px 0;
 
           .productDeliveryOne {
-            margin: 0 50px 0 5px;
+            margin: 0 55px 0 5px;
             font-size: 18px;
-            color: #717171;
+            color: $userMenuColor;
             font-weight: 600;
           }
 
@@ -101,7 +111,7 @@
         .totalAmountOne {
           margin: 0 25px 0 5px;
           font-size: 18px;
-          color: #717171;
+          color: $userMenuColor;
           font-weight: 700;
           width: 100px;
         }
@@ -110,6 +120,7 @@
           font-size: 36px;
           color: #29c1bc;
           font-weight: 600;
+          font-family: $saleFontFamily;
         }
       }
 

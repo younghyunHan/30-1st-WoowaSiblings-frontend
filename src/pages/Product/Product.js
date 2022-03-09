@@ -5,10 +5,12 @@ import './Product.scss';
 
 function Product() {
   const [item, setItem] = useState(null);
-  const params = useParams();
+  const [amount, setAmount] = useState(0);
+  const [goToBack, setGoToBack] = useState[0];
+  // const params = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/selectItemData.json')
+    fetch('/data/selectItemData.json')
       .then(res => res.json())
       .then(data => setItem(data));
   }, []);
@@ -19,27 +21,56 @@ function Product() {
   //     .then(data => setItem(data));
   // }, []);
 
+  useEffect(() => {
+    fetch('/product/')
+      .then(res => res.json())
+      .then(data => setItem(data));
+  }, [goToBasket()]);
+
+  const goToBasket = () => {};
+
+  const handleAmountValue = event => {
+    setAmount(event.target.value);
+    setGoToBack(event.target.value);
+  };
+
   return (
     item !== null && (
       <div className="product">
         <div className="productContents" key={item[0].id}>
           <img
             className="productImage"
-            src="https://images.unsplash.com/photo-1644221876015-b8bbd9e1f89f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+            src={item[0].thumbnail_image}
             alt="상세이미지"
           />
           <div className="productInfoBox">
             <h3 className="productTitle">{item[0].name}</h3>
             <div className="productList">
               <div className="productPrice">
-                <div className="productPriceOne">정가 </div>
-                <span className="productPriceTwo">{item[0].price}원</span>
+                <div className="productPriceOne">정가</div>
+                <span
+                  className={`productPriceTwo ${
+                    item[0].discount_rate ? 'productPriceThree' : ''
+                  }`}
+                >
+                  {item[0].price.toLocaleString()}원
+                </span>
               </div>
               <div className="disCountPrice">
-                <div className="productDiscountPriceOne">할인가</div>
-                <span className="productDiscountPriceTwo">
-                  {item[0].discount_price ? `${item[0].discount_price}원` : ''}
-                </span>
+                {item[0].discount_rate && (
+                  <>
+                    <div className="productDiscountPriceOne">할인가</div>
+                    <span
+                      className={`productDiscountPriceTwo ${
+                        item[0].discount_rate ? 'productDiscountPriceThree' : ''
+                      }`}
+                    >
+                      {item[0].discount_price
+                        ? `${item[0].discount_price.toLocaleString()}원`
+                        : ''}
+                    </span>
+                  </>
+                )}
               </div>
               <div className="productDelivery">
                 <div className="productDeliveryOne">배송정보</div>
@@ -48,15 +79,19 @@ function Product() {
                 </span>
               </div>
             </div>
-            <SelectItem content={item} />
+            <SelectItem content={item} onChange={handleAmountValue} />
             <div className="totalAmount">
               <div className="totalAmountOne">총 합계금액</div>
               <div className="totalPrice">
-                <strong>3000원</strong>
+                <strong>
+                  {item[0].discount_rate
+                    ? `${(amount * item[0].discount_price).toLocaleString()}원`
+                    : `${(amount * item[0].discount_price).toLocaleString()}원`}
+                </strong>
               </div>
             </div>
             <div className="btnChoiceBox">
-              <button type="button" className="btnAddCart">
+              <button type="button" className="btnAddCart" onClick={goToBasket}>
                 장바구니
               </button>
               <button type="button" className="btnAddOrder">

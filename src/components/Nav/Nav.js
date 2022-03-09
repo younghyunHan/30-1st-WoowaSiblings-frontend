@@ -1,4 +1,4 @@
-import { Link, useNavigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import USER_MENU_LIST from './NavData';
 import NavigateList from './NavigateList';

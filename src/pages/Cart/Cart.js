@@ -12,7 +12,7 @@ function Cart() {
   // const ref = useRef();
 
   useEffect(() => {
-    fetch('http://10.58.0.75:8000/orders/carts', {
+    fetch('http://10.58.6.128:8000/orders/carts', {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),

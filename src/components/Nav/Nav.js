@@ -1,5 +1,5 @@
-import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link, useNavigate, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import USER_MENU_LIST from './NavData';
 import NavigateList from './NavigateList';
 import './Nav.scss';
@@ -22,7 +22,6 @@ function Nav() {
       .then(data => {
         if (data.message === 'SUCCESS') {
           navigate('/' + query);
-          console.log('성공');
         }
       });
   };

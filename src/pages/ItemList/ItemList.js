@@ -5,7 +5,7 @@ function ItemList() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch('http://10.58.0.75:8000/products')
+    fetch('http://10.58.6.128:8000/orders/carts')
       .then(res => res.json())
       .then(data => {
         setList(data.results);

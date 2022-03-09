@@ -1,33 +1,45 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import SelectItem from './SelectItem/SelectItem';
 import './Product.scss';
 
 function Product() {
   const [item, setItem] = useState(null);
   const [amount, setAmount] = useState(0);
-  const [goToBack, setGoToBack] = useState[0];
-  // const params = useParams();
+  const [goToBack, setGoToBack] = useState(0);
+  const params = useParams();
+  const navigate = useNavigate();
+  const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('/data/selectItemData.json')
+    fetch(`http://10.58.6.128:8000/products/${params.id}`)
       .then(res => res.json())
-      .then(data => setItem(data));
+      .then(data => setItem(data.result));
   }, []);
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:3000/products/${params.id}`)
-  //     .then(res => res.json())
-  //     .then(data => setItem(data));
-  // }, []);
-
-  useEffect(() => {
-    fetch('/product/')
-      .then(res => res.json())
-      .then(data => setItem(data));
-  }, [goToBasket()]);
-
-  const goToBasket = () => {};
+  const goToBasket = () => {
+    if (token) {
+      fetch('http://10.58.6.128:8000/orders/carts', {
+        method: 'POST',
+        headers: { Authorization: token },
+        body: JSON.stringify({
+          quantity: Number(goToBack),
+          product_id: `${params.id}`,
+        }),
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.message === 'CREATE_CART') {
+            navigate('/cart');
+          } else if (result.message === 'ADD_QUANTITY_TO_EXISTED_CART') {
+            navigate('/cart');
+          }
+        });
+    } else if (token === '') {
+      alert('로그인이 필요합니다');
+      navigate('/');
+    }
+  };
 
   const handleAmountValue = event => {
     setAmount(event.target.value);
@@ -37,36 +49,36 @@ function Product() {
   return (
     item !== null && (
       <div className="product">
-        <div className="productContents" key={item[0].id}>
+        <div className="productContents" key={item.id}>
           <img
             className="productImage"
-            src={item[0].thumbnail_image}
+            src={item.thumbnail_image}
             alt="상세이미지"
           />
           <div className="productInfoBox">
-            <h3 className="productTitle">{item[0].name}</h3>
+            <h3 className="productTitle">{item.name}</h3>
             <div className="productList">
               <div className="productPrice">
                 <div className="productPriceOne">정가</div>
                 <span
                   className={`productPriceTwo ${
-                    item[0].discount_rate ? 'productPriceThree' : ''
+                    item.discount_rate ? 'productPriceThree' : ''
                   }`}
                 >
-                  {item[0].price.toLocaleString()}원
+                  {item.price.toLocaleString()}원
                 </span>
               </div>
               <div className="disCountPrice">
-                {item[0].discount_rate && (
+                {item.discount_rate && (
                   <>
                     <div className="productDiscountPriceOne">할인가</div>
                     <span
                       className={`productDiscountPriceTwo ${
-                        item[0].discount_rate ? 'productDiscountPriceThree' : ''
+                        item.discount_rate ? 'productDiscountPriceThree' : ''
                       }`}
                     >
-                      {item[0].discount_price
-                        ? `${item[0].discount_price.toLocaleString()}원`
+                      {item.discount_price
+                        ? `${item.discount_price.toLocaleString()}원`
                         : ''}
                     </span>
                   </>
@@ -84,9 +96,9 @@ function Product() {
               <div className="totalAmountOne">총 합계금액</div>
               <div className="totalPrice">
                 <strong>
-                  {item[0].discount_rate
-                    ? `${(amount * item[0].discount_price).toLocaleString()}원`
-                    : `${(amount * item[0].discount_price).toLocaleString()}원`}
+                  {item.discount_rate
+                    ? `${(amount * item.discount_price).toLocaleString()}원`
+                    : `${(amount * item.discount_price).toLocaleString()}원`}
                 </strong>
               </div>
             </div>

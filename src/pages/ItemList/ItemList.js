@@ -7,15 +7,15 @@ function ItemList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/data/listData.json')
+    fetch('http://10.58.6.128:8000/products')
       .then(res => res.json())
       .then(data => {
-        setList(data);
+        setList(data.results);
       });
   }, []);
 
   const handleClick = id => {
-    navigate(`product/${id}`);
+    navigate(`/product/${id}`);
   };
 
   return (
@@ -32,7 +32,7 @@ function ItemList() {
                 <div className="itemPhotoBox">
                   <img
                     className="listImage"
-                    src={content.image}
+                    src={content.thumbnail_image}
                     alt="listItem"
                   />
                 </div>

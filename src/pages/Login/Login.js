@@ -15,7 +15,7 @@ function Login() {
   };
 
   const goToMain = () => {
-    fetch('http://10.58.2.78:8000/users/signin', {
+    fetch('http://10.58.6.128:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,
@@ -62,7 +62,6 @@ function Login() {
         <button onClick={goToMain} className="loginBtn">
           로그인
         </button>
-
         <Link to="/sign">
           <h3 className="signup">회원가입</h3>
         </Link>

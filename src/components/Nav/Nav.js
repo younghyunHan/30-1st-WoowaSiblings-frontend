@@ -14,8 +14,14 @@ function Nav() {
   const [cartNumber, setCartNumber] = useState(0);
 
   const handleNav = (id, en) => {
-    const query = id === 1 ? 'item-list' : 'product/?category=' + en;
-    navigate('/' + query);
+    const query = id === 1 ? 'item-list' : 'products?category=' + en;
+    fetch(`http://10.58.6.128:8000/${query}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.message === 'SUCCESS') {
+          navigate('/' + query);
+        }
+      });
   };
 
   return (

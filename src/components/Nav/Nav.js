@@ -1,10 +1,22 @@
-import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import USER_MENU_LIST from './NavData';
+import NavigateList from './NavigateList';
 import './Nav.scss';
 
+// function getLinkStyle({ isActive }) {
+//   return {
+//     textDecoration: isActive ? 'underline' : undefined,
+//   };
+// }
 function Nav() {
+  const navigate = useNavigate();
   const [cartNumber, setCartNumber] = useState(0);
+
+  const handleNav = (id, en) => {
+    const query = id === 1 ? 'item-list' : 'product/?category=' + en;
+    navigate('/' + query);
+  };
 
   return (
     <div className="navWraper">
@@ -44,20 +56,11 @@ function Nav() {
 
           <div className="category">
             <ul>
-              <li>
-                <NavLink activeClassName="active" to="/item-list">
-                  전체
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/goods_service">삼십기쓰</NavLink>
-              </li>
-              <li>
-                <NavLink to="/goods_things">삼십띵쓰</NavLink>
-              </li>
-              <li>
-                <NavLink to="/goods_mentors">멘톳쓰</NavLink>
-              </li>
+              {NavigateList.map(list => (
+                <li key={list.id} onClick={() => handleNav(list.id, list.en)}>
+                  {list.name}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

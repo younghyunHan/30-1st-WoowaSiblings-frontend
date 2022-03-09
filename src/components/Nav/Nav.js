@@ -14,12 +14,15 @@ function Nav() {
   const [cartNumber, setCartNumber] = useState(0);
 
   const handleNav = (id, en) => {
-    const query = id === 1 ? 'item-list' : 'products?category=' + en;
-    fetch(`http://10.58.6.128:8000/${query}`)
+    const query = id === 1 ? 'products' : 'products?category=' + en;
+    fetch(`http://10.58.6.128:8000/${query}`, {
+      method: 'GET',
+    })
       .then(res => res.json())
       .then(data => {
         if (data.message === 'SUCCESS') {
           navigate('/' + query);
+          console.log('성공');
         }
       });
   };
@@ -48,7 +51,7 @@ function Nav() {
           </div>
 
           <div className="middle">
-            <Link to="/item-list">
+            <Link to="/products">
               <img className="logo" alt="배민문방구" src="images/welogo.png" />
             </Link>
             {/* //검색기능 추가구현 */}

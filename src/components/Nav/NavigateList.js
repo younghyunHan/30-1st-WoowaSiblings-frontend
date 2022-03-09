@@ -2,7 +2,7 @@ const NavigateList = [
   {
     id: 1,
     name: '전체',
-    en: 'item-list',
+    en: '',
   },
   {
     id: 2,

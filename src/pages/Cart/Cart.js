@@ -21,7 +21,6 @@ function Cart() {
       .then(res => res.json())
       .then(data => {
         setItems(data.results);
-        console.log(items);
       });
   }, []);
   //  TODO 체크박스

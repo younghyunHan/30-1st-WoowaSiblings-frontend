@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import USER_MENU_LIST from './NavData';
 import './Nav.scss';
 
@@ -45,18 +45,18 @@ function Nav() {
           <div className="category">
             <ul>
               <li>
-                <NavLink activeClassName="active" to="/item-list">
+                <NavLink activeclassname="active" to="/item-list">
                   전체
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/goods_service">삼십기쓰</NavLink>
+                <NavLink to="/?category=30th_services">삼십기쓰</NavLink>
               </li>
               <li>
-                <NavLink to="/goods_things">삼십띵쓰</NavLink>
+                <NavLink to="/?category=30th_things">삼십띵쓰</NavLink>
               </li>
               <li>
-                <NavLink to="/goods_mentors">멘톳쓰</NavLink>
+                <NavLink to="/?category=goods_mentors">멘톳쓰</NavLink>
               </li>
             </ul>
           </div>

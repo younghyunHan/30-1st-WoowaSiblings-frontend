@@ -6,7 +6,7 @@ function ItemList() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/listData.json')
+    fetch('http://10.58.6.128:8000/products')
       .then(res => res.json())
       .then(data => {
         setList(data.results);
@@ -21,13 +21,13 @@ function ItemList() {
             return (
               <li key={content.id} className="listGallery">
                 <div className="itemPhotoBox">
-                  <Link to="/" className="itemPageMove">
+                  <a href="#" className="itemPageMove">
                     <img
                       className="listImage"
                       src={content.thumbnail_image}
                       alt="listItem"
                     />
-                  </Link>
+                  </a>
                 </div>
                 {content.discount_rate && (
                   <div className="itemDiscountRate">

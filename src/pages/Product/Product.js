@@ -20,32 +20,33 @@ function Product() {
   }, [params.id]);
 
   const goToBasket = () => {
-    if (token) {
-      fetch(`${API.CART}`, {
-        method: 'POST',
-        headers: { Authorization: token },
-        body: JSON.stringify({
-          quantity: goToBack,
-          product_id: `${params.id}`,
-        }),
-      })
-        .then(response => response.json())
-        .then(result => {
-          if (
-            result.message === 'CREATE_CART' ||
-            'ADD_QUANTITY_TO_EXISTED_CART'
-          ) {
-            window.confirm(
-              '상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?'
-            ) && navigate('/cart');
-          } else {
-            alert('다시 시도해주세요!');
-          }
-        });
-    } else if (!token) {
+    if (!token) {
       alert('로그인이 필요합니다.');
       navigate('/login');
+      return;
     }
+
+    fetch(`${API.CART}`, {
+      method: 'POST',
+      headers: { Authorization: token },
+      body: JSON.stringify({
+        quantity: goToBack,
+        product_id: `${params.id}`,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (
+          result.message === 'CREATE_CART' ||
+          'ADD_QUANTITY_TO_EXISTED_CART'
+        ) {
+          window.confirm(
+            '상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?'
+          ) && navigate('/cart');
+        } else {
+          alert('다시 시도해주세요!');
+        }
+      });
   };
 
   const handleAmountValue = event => {

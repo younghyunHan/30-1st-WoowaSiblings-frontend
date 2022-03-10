@@ -12,14 +12,14 @@ function Product() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch(`http://10.58.6.128:8000/products/${params.id}`)
+    fetch(`http://10.58.7.45:8000/products/${params.id}`)
       .then(res => res.json())
       .then(data => setItem(data.result));
   }, []);
 
   const goToBasket = () => {
     if (token) {
-      fetch('http://10.58.6.128:8000/orders/carts', {
+      fetch('http://10.58.7.45:8000/orders/carts', {
         method: 'POST',
         headers: { Authorization: token },
         body: JSON.stringify({
@@ -40,6 +40,9 @@ function Product() {
             alert('다시 시도해주세요!');
           }
         });
+    } else if (!token) {
+      alert('로그인이 필요합니다.');
+      navigate('/login');
     }
   };
 

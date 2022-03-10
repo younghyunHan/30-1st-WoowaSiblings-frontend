@@ -1,16 +1,24 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './ItemList.scss';
 
 function ItemList() {
   const [list, setList] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
-    fetch('http://10.58.6.128:8000/products')
+    fetch('http://10.58.7.45:8000/products')
       .then(res => res.json())
       .then(data => {
         setList(data.results);
       });
   }, []);
+
+  useEffect(() => {
+    fetch(`http://10.58.7.45:8000/products{location.pathname}`)
+      .then(res => res.json())
+      .then(res => console.log(res));
+  });
 
   return (
     <div className="itemList">

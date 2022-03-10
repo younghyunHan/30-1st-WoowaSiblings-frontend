@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
+import '../../config';
 import './Cart.scss';
 
 function Cart() {
@@ -12,7 +13,7 @@ function Cart() {
   // const ref = useRef();
 
   useEffect(() => {
-    fetch('http://10.58.6.128:8000/orders/carts', {
+    fetch('${CART}', {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -81,6 +82,7 @@ function Cart() {
   //   }
   // };
 
+  //reduce 메서드 사용해서 리팩토링 진행예정
   let totalPrice = 0;
   for (let i = 0; i < items.length; i++) {
     totalPrice += items[i].total_price;

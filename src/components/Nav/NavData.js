@@ -2,7 +2,7 @@ const USER_MENU_LIST = [
   {
     id: 1,
     userMenu: '로그인',
-    movePath: '/',
+    movePath: '/login',
   },
   {
     id: 2,

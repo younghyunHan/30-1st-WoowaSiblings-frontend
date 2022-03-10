@@ -15,7 +15,7 @@ function Login() {
   };
 
   const goToMain = () => {
-    fetch('http://10.58.6.128:8000/users/signin', {
+    fetch('http://10.58.7.45:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,
@@ -26,7 +26,7 @@ function Login() {
       .then(data => {
         if (data.ACCESS_TOKEN) {
           localStorage.setItem('token', data.ACCESS_TOKEN);
-          alert('환영합니다! ' + `${values.id}` + '님 😀');
+          alert(`환영합니다! ${values.id}님 😀`);
           navigate('/products');
         } else if (data.message === 'INVALID_USER') {
           alert('id와 password를 확인해주세요!!');
@@ -63,7 +63,6 @@ function Login() {
         <button onClick={goToMain} className="loginBtn">
           로그인
         </button>
-
         <Link to="/sign">
           <h3 className="signup">회원가입</h3>
         </Link>

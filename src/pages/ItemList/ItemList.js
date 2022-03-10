@@ -1,16 +1,22 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ItemList.scss';
 
 function ItemList() {
   const [list, setList] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://10.58.6.128:8000/products')
+    fetch('http://10.58.7.45:8000/products')
       .then(res => res.json())
       .then(data => {
         setList(data.results);
       });
   }, []);
+
+  const handleClick = id => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <div className="itemList">
@@ -18,15 +24,17 @@ function ItemList() {
         <ul className="itemListCotentGallery">
           {list.map(content => {
             return (
-              <li key={content.id} className="listGallery">
+              <li
+                key={content.id}
+                className="listGallery"
+                onClick={() => handleClick(content.id)}
+              >
                 <div className="itemPhotoBox">
-                  <a href="#" className="itemPageMove">
-                    <img
-                      className="listImage"
-                      src={content.thumbnail_image}
-                      alt="listItem"
-                    />
-                  </a>
+                  <img
+                    className="listImage"
+                    src={content.thumbnail_image}
+                    alt="listItem"
+                  />
                 </div>
                 {content.discount_rate && (
                   <div className="itemDiscountRate">
@@ -34,9 +42,9 @@ function ItemList() {
                   </div>
                 )}
                 <div className="itemTitleBox">
-                  <a href="#" className="itemTitleBoxName">
+                  <div className="itemTitleBoxName">
                     <span>{content.name}</span>
-                  </a>
+                  </div>
                 </div>
                 <div className="itemMoneyBox">
                   <span
@@ -44,11 +52,11 @@ function ItemList() {
                       content.discount_rate ? '' : 'priceBig'
                     }`}
                   >
-                    {content.price}원
+                    {Number(content.price).toLocaleString()}원
                   </span>
                   {content.discount_rate && (
                     <span className="discountPrice">
-                      {content.discount_price}원
+                      {Number(content.discount_price).toLocaleString()}원
                     </span>
                   )}
                 </div>

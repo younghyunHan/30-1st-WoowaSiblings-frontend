@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
 import { useNavigate, Link } from 'react-router-dom';
+import { API } from '../../config';
 
 import './Login.scss';
 
@@ -15,7 +15,7 @@ function Login() {
   };
 
   const goToMain = () => {
-    fetch('http://10.58.7.45:8000/users/signin', {
+    fetch(`${API.LOGIN}`, {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,

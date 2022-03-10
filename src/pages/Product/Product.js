@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import SelectItem from './SelectItem/SelectItem';
+import { API } from '../../config';
 import './Product.scss';
 
 function Product() {
@@ -13,7 +14,7 @@ function Product() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch(`http://10.58.7.45:8000/products/${params.id}`)
+    fetch(`${API.DETAIL_PAGE}${params.id}`)
       .then(res => res.json())
       .then(data => setItem(data.result));
   }, [params.id]);

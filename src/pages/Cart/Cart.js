@@ -13,7 +13,7 @@ function Cart() {
   // const ref = useRef();
 
   useEffect(() => {
-    fetch('${API.CART}', {
+    fetch(`${API.CART}`, {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -85,7 +85,7 @@ function Cart() {
   //reduce 메서드 사용해서 리팩토링 진행예정
   let totalPrice = 0;
   for (let i = 0; i < items.length; i++) {
-    totalPrice += items[i].total_price;
+    totalPrice += Number(items[i].total_price);
   }
 
   return (
@@ -126,7 +126,7 @@ function Cart() {
             </li>
             <li>
               <strong className="totalGoodsPrice">
-                {totalPrice.toLocaleString()}
+                {Number(totalPrice).toLocaleString()}
                 {/* {totalPrice.toLocaleString('ko-KR')} */}
               </strong>
               원
@@ -154,7 +154,7 @@ function Cart() {
             <li>합계</li>
             <li>
               <strong className="totalSettlePrice">
-                {totalPrice.toLocaleString()}
+                {Number(totalPrice).toLocaleString()}
               </strong>
               원
             </li>

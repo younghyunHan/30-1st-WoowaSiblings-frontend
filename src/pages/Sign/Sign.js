@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API } from '../../config';
 import './Sign.scss';
 
 function Sign() {
@@ -13,7 +14,7 @@ function Sign() {
   };
 
   const goToLogin = () => {
-    fetch('http://10.58.2.78:8000/users/signup', {
+    fetch(`${API.SIGNUP}`, {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,

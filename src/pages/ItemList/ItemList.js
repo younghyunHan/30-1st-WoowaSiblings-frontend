@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { API } from '../../config';
 import './ItemList.scss';
 
 function ItemList() {
@@ -8,7 +9,7 @@ function ItemList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://10.58.7.45:8000/products${location.search}`)
+    fetch(`${API.MAIN}${location.search}`)
       .then(res => res.json())
       .then(data => setList(data.results));
   }, [location.search]);

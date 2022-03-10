@@ -7,7 +7,7 @@ const NavigateList = [
   {
     id: 2,
     name: '삼십기쓰',
-    en: '30th_service',
+    en: '30th_services',
   },
   {
     id: 3,

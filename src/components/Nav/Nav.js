@@ -15,15 +15,8 @@ function Nav() {
 
   const handleNav = (id, en) => {
     const query = id === 1 ? 'products' : 'products?category=' + en;
-    fetch(`http://10.58.6.128:8000/${query}`, {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.message === 'SUCCESS') {
-          navigate('/' + query);
-        }
-      });
+
+    navigate('/' + query);
   };
 
   return (

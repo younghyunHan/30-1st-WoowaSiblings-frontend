@@ -7,17 +7,9 @@ function ItemList() {
   const location = useLocation();
 
   useEffect(() => {
-    fetch('http://10.58.7.45:8000/products')
+    fetch(`http://10.58.7.45:8000/products${location.search}`)
       .then(res => res.json())
-      .then(data => {
-        setList(data.results);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch(`http://10.58.7.45:8000/{location.search}`)
-      .then(res => res.json())
-      .then(res => console.log(res));
+      .then(data => setList(data.results));
   }, [location.search]);
 
   return (
@@ -52,11 +44,11 @@ function ItemList() {
                       content.discount_rate ? '' : 'priceBig'
                     }`}
                   >
-                    {content.price}원
+                    {Number(content.price).toLocaleString()}원
                   </span>
                   {content.discount_rate && (
                     <span className="discountPrice">
-                      {content.discount_price}원
+                      {Number(content.discount_price).toLocaleString()}원
                     </span>
                   )}
                 </div>

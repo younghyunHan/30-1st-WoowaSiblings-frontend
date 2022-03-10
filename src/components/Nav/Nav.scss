@@ -131,8 +131,9 @@
             font-weight: 500;
             font-size: 16px;
             color: #333333;
+            cursor: pointer;
 
-            :hover {
+            &:hover {
               color: $userMenuColor;
             }
 

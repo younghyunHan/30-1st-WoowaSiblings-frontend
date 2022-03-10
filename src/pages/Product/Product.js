@@ -15,7 +15,7 @@ function Product() {
     fetch(`http://10.58.7.45:8000/products/${params.id}`)
       .then(res => res.json())
       .then(data => setItem(data.result));
-  }, []);
+  }, [params.id]);
 
   const goToBasket = () => {
     if (token) {

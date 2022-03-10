@@ -13,7 +13,7 @@ function Cart() {
   // const ref = useRef();
 
   useEffect(() => {
-    fetch('${CART}', {
+    fetch('${API.CART}', {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),

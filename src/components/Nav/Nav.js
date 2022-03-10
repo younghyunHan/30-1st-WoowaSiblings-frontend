@@ -1,10 +1,30 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import USER_MENU_LIST from './NavData';
+import NavigateList from './NavigateList';
 import './Nav.scss';
 
+// function getLinkStyle({ isActive }) {
+//   return {
+//     textDecoration: isActive ? 'underline' : undefined,
+//   };
+// }
 function Nav() {
+  const navigate = useNavigate();
   const [cartNumber, setCartNumber] = useState(0);
+
+  const handleNav = (id, en) => {
+    const query = id === 1 ? 'products' : 'products?category=' + en;
+    fetch(`http://10.58.6.128:8000/${query}`, {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.message === 'SUCCESS') {
+          navigate('/' + query);
+        }
+      });
+  };
 
   return (
     <div className="navWraper">
@@ -30,8 +50,8 @@ function Nav() {
           </div>
 
           <div className="middle">
-            <Link to="/item-list">
-              <img className="logo" alt="배민문방구" src="/images/welogo.png" />
+            <Link to="/products">
+              <img className="logo" alt="배민문방구" src="images/welogo.png" />
             </Link>
             {/* //검색기능 추가구현 */}
             {/* <form className="search">
@@ -44,20 +64,11 @@ function Nav() {
 
           <div className="category">
             <ul>
-              <li>
-                <NavLink className="active" to="/item-list">
-                  전체
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/goods_service">삼십기쓰</NavLink>
-              </li>
-              <li>
-                <NavLink to="/goods_things">삼십띵쓰</NavLink>
-              </li>
-              <li>
-                <NavLink to="/goods_mentors">멘톳쓰</NavLink>
-              </li>
+              {NavigateList.map(list => (
+                <li key={list.id} onClick={() => handleNav(list.id, list.en)}>
+                  {list.name}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

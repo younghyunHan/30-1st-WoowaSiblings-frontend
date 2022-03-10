@@ -7,7 +7,7 @@ function ItemList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://10.58.7.45:8000/products')
+    fetch('http://10.58.6.128:8000/products')
       .then(res => res.json())
       .then(data => {
         setList(data.results);
@@ -15,7 +15,7 @@ function ItemList() {
   }, []);
 
   const handleClick = id => {
-    navigate(`/product/${id}`);
+    navigate(`/products/${id}`);
   };
 
   return (

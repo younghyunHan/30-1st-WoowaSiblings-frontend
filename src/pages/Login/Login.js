@@ -26,7 +26,8 @@ function Login() {
       .then(data => {
         if (data.ACCESS_TOKEN) {
           localStorage.setItem('token', data.ACCESS_TOKEN);
-          navigate('/item-list');
+          alert(`환영합니다! ${values.id}님 😀`);
+          navigate('/products');
         } else if (data.message === 'INVALID_USER') {
           alert('id와 password를 확인해주세요!!');
         }

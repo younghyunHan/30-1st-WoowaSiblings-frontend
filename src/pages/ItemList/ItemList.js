@@ -15,10 +15,10 @@ function ItemList() {
   }, []);
 
   useEffect(() => {
-    fetch(`http://10.58.7.45:8000/products{location.pathname}`)
+    fetch(`http://10.58.7.45:8000/{location.search}`)
       .then(res => res.json())
       .then(res => console.log(res));
-  });
+  }, [location.search]);
 
   return (
     <div className="itemList">

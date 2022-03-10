@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './ItemList.scss';
 
 function ItemList() {
   const [list, setList] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://10.58.7.45:8000/products${location.search}`)
@@ -12,21 +13,27 @@ function ItemList() {
       .then(data => setList(data.results));
   }, [location.search]);
 
+  const handleClick = id => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="itemList">
       <div className="itemListContent">
         <ul className="itemListCotentGallery">
           {list.map(content => {
             return (
-              <li key={content.id} className="listGallery">
+              <li
+                key={content.id}
+                className="listGallery"
+                onClick={() => handleClick(content.id)}
+              >
                 <div className="itemPhotoBox">
-                  <a href="#" className="itemPageMove">
-                    <img
-                      className="listImage"
-                      src={content.thumbnail_image}
-                      alt="listItem"
-                    />
-                  </a>
+                  <img
+                    className="listImage"
+                    src={content.thumbnail_image}
+                    alt="listItem"
+                  />
                 </div>
                 {content.discount_rate && (
                   <div className="itemDiscountRate">
@@ -34,9 +41,9 @@ function ItemList() {
                   </div>
                 )}
                 <div className="itemTitleBox">
-                  <a href="#" className="itemTitleBoxName">
+                  <div className="itemTitleBoxName">
                     <span>{content.name}</span>
-                  </a>
+                  </div>
                 </div>
                 <div className="itemMoneyBox">
                   <span

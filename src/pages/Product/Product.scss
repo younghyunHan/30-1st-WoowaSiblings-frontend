@@ -1,0 +1,156 @@
+@import '../../styles/variables.scss';
+
+.product {
+  padding-top: 300px;
+  padding-bottom: 100px;
+  line-height: 1.5;
+  font-family: 'Noto Sans';
+
+  .productContents {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 40px;
+
+    .productImage {
+      width: 400px;
+      margin-right: 100px;
+    }
+
+    .productInfoBox {
+      width: 500px;
+
+      .productTitle {
+        padding-bottom: 30px;
+        font-weight: 600;
+        font-size: 30px;
+      }
+
+      .productList {
+        margin: 10px 0 20px 0;
+
+        .productPrice {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 4px 0;
+
+          .productPriceOne {
+            margin: 0 85px 0 5px;
+            font-size: 18px;
+            color: $userMenuColor;
+            font-weight: 600;
+          }
+
+          .productPriceTwo {
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          .productPriceThree {
+            font-size: 15px;
+            color: $userMenuColor;
+            text-decoration: line-through;
+          }
+        }
+
+        .disCountPrice {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 4px 0;
+
+          .productDiscountPriceOne {
+            margin: 0 70px 0 5px;
+            font-size: 18px;
+            color: $userMenuColor;
+            font-weight: 600;
+          }
+
+          .productDiscountPriceTwo {
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          .productDiscountPriceThree {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: $saleFontFamily;
+          }
+        }
+
+        .productDelivery {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 4px 0;
+
+          .productDeliveryOne {
+            margin: 0 55px 0 5px;
+            font-size: 18px;
+            color: $userMenuColor;
+            font-weight: 600;
+          }
+
+          .productDeliveryTwo {
+            font-size: 18px;
+            font-family: 'Noto sans';
+          }
+        }
+      }
+
+      .totalAmount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 15px 0 0 0;
+        padding: 10px 0 5px 0;
+        border-top: 1px solid #dbdbdb;
+
+        .totalAmountOne {
+          margin: 0 25px 0 5px;
+          font-size: 18px;
+          color: $userMenuColor;
+          font-weight: 700;
+          width: 100px;
+        }
+
+        .totalPrice {
+          font-size: 36px;
+          color: #29c1bc;
+          font-weight: 600;
+          font-family: $saleFontFamily;
+        }
+      }
+
+      .btnChoiceBox {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+
+        .btnAddCart {
+          width: 152px;
+          height: 52px;
+          border: 1px solid #cccccc;
+          background-color: #ffffff;
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .btnAddOrder {
+          width: 230px;
+          height: 52px;
+          margin: 0 0 0 6px;
+          padding: 0 10px 0 10px;
+          border: 1px solid black;
+          background-color: black;
+          text-align: center;
+          font-weight: 600;
+          font-size: 14px;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -5,14 +5,13 @@
   width: 1200px;
   margin: 0 auto;
   padding: 300px 0 100px 0;
-
   line-height: 1.5;
   font-family: 'Noto Sans';
 
   .itemListContent {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
 
     .itemListCotentGallery {
       display: flex;
@@ -31,12 +30,10 @@
           height: 350px;
           overflow: hidden;
 
-          .itemPageMove {
-            .listImage {
-              width: 100%;
-              height: 100%;
-              object-fit: fill;
-            }
+          .listImage {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
           }
         }
 

@@ -1,0 +1,216 @@
+.cart {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 300px 0 100px;
+
+  .orderTitleBox {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+
+    .orderTitle {
+      font-size: 28px;
+      font-weight: 600;
+    }
+  }
+
+  .cartTable {
+    margin-top: 60px;
+    width: 1200px;
+    text-align: center;
+
+    th {
+      padding: 9px 10px 10px;
+      border-top: 1px solid #999999;
+      background-color: #f7f7f7;
+      font-size: 12px;
+      color: #333333;
+      font-weight: bold;
+    }
+
+    td {
+      height: 31px;
+      padding: 15px 10px 14px;
+      color: #777777;
+      border-bottom: 1px solid #dbdbdb;
+      background: #ffffff;
+      vertical-align: middle;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333333;
+      border-top: 1px solid #dbdbdb;
+
+      .countNumber {
+        margin-top: 4px;
+        width: 40px;
+        text-align: center;
+        padding: 0 3px;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+        outline: none;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          height: 15px;
+          opacity: 1;
+        }
+      }
+      .countNumberBtn {
+        margin: 4px 0 0 4px;
+        padding: 0 3px;
+        width: 40px;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    .tdLast {
+      border-left: 1px solid #dbdbdb;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .cartList {
+      display: flex;
+      align-items: flex-end;
+
+      h3 {
+        padding-left: 8px;
+        font-size: 14px;
+        line-height: 10px;
+      }
+      img {
+        width: 42px;
+        height: 51px;
+        object-fit: cover;
+      }
+    }
+
+    .inputCheck {
+      display: inline-block;
+      margin: 0;
+      padding: 2px 0 0 6px;
+      width: 16px;
+      height: 16px;
+      background: url(../../assets/images/nonActive.png) no-repeat 0 0px /
+        contain;
+      cursor: pointer;
+
+      &:hover {
+        background: url(../../assets/images/hover.png) no-repeat 0 0px / contain;
+      }
+
+      &:checked {
+        background: url(../../assets/images/Active.png) no-repeat 0 0px /
+          contain;
+      }
+    }
+  }
+  .goToShopBox {
+    margin: 18px 0 30px 0;
+
+    .goToShop {
+      color: #333333;
+      font-size: 12px;
+      text-decoration: none;
+      height: 18px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #333333;
+    }
+  }
+  .totalPriceBox {
+    width: 100%;
+    padding: 20px 40px 25px 35px;
+    border: 2px solid #d6d6d6;
+    text-align: end;
+
+    .totalPriceList {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      span {
+        padding: 0 15px;
+      }
+
+      ul {
+        display: table-cell;
+        padding: 5px 10px;
+        font-size: 16px;
+
+        li {
+          &:first-child {
+            margin-bottom: 6px;
+          }
+        }
+
+        strong {
+          font-weight: 700;
+          font-size: 18px;
+        }
+
+        .totalCount {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .totalSettlePrice {
+          color: #29c1bc;
+        }
+      }
+    }
+  }
+  .btnOrderBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+
+    .goodsChoice {
+      width: 120px;
+      height: 30px;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 12px;
+      color: #626262;
+      background-color: white;
+      border: 1px solid #a3a3a3;
+
+      &:nth-child(2) {
+        margin-left: 6px;
+      }
+    }
+
+    .goodsOrder {
+      width: 190px;
+      height: 55px;
+      padding: 0 20px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:first-child {
+        color: #3e3d3c;
+        border: 1px solid #cccccc;
+        background-color: #fff;
+
+        &:hover {
+          border: 1px solid #bdbdbd;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-left: 6px;
+        color: #fff;
+        border: 1px solid #000;
+        background-color: #000;
+
+        &:hover {
+          background-color: rgb(52, 52, 52);
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
-import '../../config';
+import { API } from '../../config';
 import './Cart.scss';
 
 function Cart() {

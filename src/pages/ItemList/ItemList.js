@@ -15,7 +15,7 @@ function ItemList() {
   }, []);
 
   const handleClick = id => {
-    navigate(`/products/${id}`);
+    navigate(`/product/${id}`);
   };
 
   return (
@@ -52,11 +52,11 @@ function ItemList() {
                       content.discount_rate ? '' : 'priceBig'
                     }`}
                   >
-                    {content.price}원
+                    {Number(content.price).toLocaleString()}원
                   </span>
                   {content.discount_rate && (
                     <span className="discountPrice">
-                      {content.discount_price}원
+                      {Number(content.discount_price).toLocaleString()}원
                     </span>
                   )}
                 </div>

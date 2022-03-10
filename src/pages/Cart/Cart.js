@@ -117,7 +117,7 @@ function Cart() {
         </tbody>
       </table>
       <div className="goToShopBox">
-        <Link to="/item-list" className="goToShop">
+        <Link to="/products" className="goToShop">
           &lt; 쇼핑 계속하기
         </Link>
       </div>

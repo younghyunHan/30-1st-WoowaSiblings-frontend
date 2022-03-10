@@ -3,6 +3,7 @@ import './SelectItem.scss';
 
 function SelectItem({ content, onChange }) {
   const [quantityNum, setQuantityNum] = useState(0);
+  const min = 0;
 
   const handleQuantityInput = e => {
     setQuantityNum(Number(e.target.value)); // value는 string
@@ -15,6 +16,7 @@ function SelectItem({ content, onChange }) {
         <div className="countPrice">
           <input
             type="number"
+            min={min}
             max={content.stock}
             value={quantityNum}
             onChange={handleQuantityInput}

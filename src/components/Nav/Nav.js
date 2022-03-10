@@ -15,7 +15,6 @@ function Nav() {
 
   const handleNav = (id, en) => {
     const query = id === 1 ? 'products' : 'products?category=' + en;
-
     navigate('/' + query);
   };
 

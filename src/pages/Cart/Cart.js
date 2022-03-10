@@ -88,6 +88,10 @@ function Cart() {
     totalPrice += Number(items[i].total_price);
   }
 
+  function success() {
+    alert('주문 성공');
+  }
+
   return (
     <div className="cart">
       <div className="orderTitleBox">
@@ -169,7 +173,9 @@ function Cart() {
         </div>
         <div className="orderBox">
           <button className="goodsOrder">선택 상품 주문</button>
-          <button className="goodsOrder">전체 상품 주문</button>
+          <button onClick={() => success()} className="goodsOrder">
+            전체 상품 주문
+          </button>
         </div>
       </div>
     </div>

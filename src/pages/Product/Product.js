@@ -21,7 +21,7 @@ function Product() {
 
   const goToBasket = () => {
     if (token) {
-      fetch('http://10.58.7.45:8000/orders/carts', {
+      fetch(`${API.CART}`, {
         method: 'POST',
         headers: { Authorization: token },
         body: JSON.stringify({

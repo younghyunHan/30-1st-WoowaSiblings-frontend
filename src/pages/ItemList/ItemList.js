@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { API } from '../../config';
 import './ItemList.scss';
 
 function ItemList() {
   const [list, setList] = useState([]);
+  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://10.58.7.45:8000/products')
+    fetch(`${API.MAIN}${location.search}`)
       .then(res => res.json())
-      .then(data => {
-        setList(data.results);
-      });
-  }, []);
+      .then(data => setList(data.results));
+  }, [location.search]);
 
   const handleClick = id => {
     navigate(`/product/${id}`);

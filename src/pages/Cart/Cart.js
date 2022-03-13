@@ -13,7 +13,7 @@ function Cart() {
   // const ref = useRef();
 
   useEffect(() => {
-    fetch('${API.CART}', {
+    fetch(`${API.CART}`, {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -85,7 +85,11 @@ function Cart() {
   //reduce 메서드 사용해서 리팩토링 진행예정
   let totalPrice = 0;
   for (let i = 0; i < items.length; i++) {
-    totalPrice += items[i].total_price;
+    totalPrice += Number(items[i].total_price);
+  }
+
+  function success() {
+    alert('주문 성공');
   }
 
   return (
@@ -113,7 +117,7 @@ function Cart() {
         </tbody>
       </table>
       <div className="goToShopBox">
-        <Link to="/item-list" className="goToShop">
+        <Link to="/products" className="goToShop">
           &lt; 쇼핑 계속하기
         </Link>
       </div>
@@ -126,7 +130,7 @@ function Cart() {
             </li>
             <li>
               <strong className="totalGoodsPrice">
-                {totalPrice.toLocaleString()}
+                {Number(totalPrice).toLocaleString()}
                 {/* {totalPrice.toLocaleString('ko-KR')} */}
               </strong>
               원
@@ -154,7 +158,7 @@ function Cart() {
             <li>합계</li>
             <li>
               <strong className="totalSettlePrice">
-                {totalPrice.toLocaleString()}
+                {Number(totalPrice).toLocaleString()}
               </strong>
               원
             </li>
@@ -169,7 +173,9 @@ function Cart() {
         </div>
         <div className="orderBox">
           <button className="goodsOrder">선택 상품 주문</button>
-          <button className="goodsOrder">전체 상품 주문</button>
+          <button onClick={() => success()} className="goodsOrder">
+            전체 상품 주문
+          </button>
         </div>
       </div>
     </div>

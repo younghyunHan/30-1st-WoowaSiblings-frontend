@@ -41,7 +41,7 @@ function CartItem({ item }) {
         <input min="1" value={quantity} type="number" className="countNumber" />
         <button className="countNumberBtn">변경</button> */}
       </td>
-      <td>{total_price.toLocaleString()}원</td>
+      <td>{Number(total_price).toLocaleString()}원</td>
       <td rowSpan={item.length} className="tdLast">
         <p>기본 배송비</p>
         <p>0원</p>

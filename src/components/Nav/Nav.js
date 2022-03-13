@@ -15,15 +15,7 @@ function Nav() {
 
   const handleNav = (id, en) => {
     const query = id === 1 ? 'products' : 'products?category=' + en;
-    fetch(`http://10.58.7.45:8000/${query}`, {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.message === 'SUCCESS') {
-          navigate('/' + query);
-        }
-      });
+    navigate('/' + query);
   };
 
   return (
@@ -53,13 +45,12 @@ function Nav() {
             <Link to="/products">
               <img className="logo" alt="배민문방구" src="images/welogo.png" />
             </Link>
-            {/* //검색기능 추가구현 */}
-            {/* <form className="search">
+            <form className="search">
               <div className="searchBox">
                 <input placeholder="검색어를 입력해주세요." />
                 <img className="searchImg" alt="검색" src="images/search.png" />
               </div>
-            </form> */}
+            </form>
           </div>
 
           <div className="category">

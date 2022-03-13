@@ -8,10 +8,12 @@ import Product from './pages/Product/Product';
 import ItemList from './pages/ItemList/ItemList';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
+import Scroll from './components/Scroll/Scroll';
 
 function Router() {
   return (
     <BrowserRouter>
+      <Scroll />
       <Nav />
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -24,5 +26,4 @@ function Router() {
     </BrowserRouter>
   );
 }
-
 export default Router;

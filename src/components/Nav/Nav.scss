@@ -131,8 +131,9 @@
             font-weight: 500;
             font-size: 16px;
             color: #333333;
+            cursor: pointer;
 
-            :hover {
+            &:hover {
               color: $userMenuColor;
             }
 
@@ -141,14 +142,6 @@
               font-weight: 700;
               text-decoration: none;
               color: $userMenuColor;
-            }
-
-            .active {
-              position: absolute;
-              height: 27px;
-              border-bottom: 2px solid $baeminPointColor;
-              font-weight: bold;
-              color: $baeminPointColor;
             }
           }
         }

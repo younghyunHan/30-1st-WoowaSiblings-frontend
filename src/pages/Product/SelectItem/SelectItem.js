@@ -3,7 +3,7 @@ import './SelectItem.scss';
 
 function SelectItem({ content, onChange }) {
   const [quantityNum, setQuantityNum] = useState(0);
-  const min = 1;
+  const min = 0;
 
   const handleQuantityInput = e => {
     setQuantityNum(Number(e.target.value)); // value는 string

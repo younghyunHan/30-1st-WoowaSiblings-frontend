@@ -1,7 +1,10 @@
+@import '../../styles/variables.scss';
+
 .cart {
   margin: 0 auto;
   width: 1200px;
   padding: 300px 0 100px;
+  font-family: 'Noto Sans';
 
   .orderTitleBox {
     padding-bottom: 10px;

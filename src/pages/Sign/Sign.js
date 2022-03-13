@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API } from '../../config';
 import './Sign.scss';
 
 function Sign() {
@@ -13,7 +14,7 @@ function Sign() {
   };
 
   const goToLogin = () => {
-    fetch('http://10.58.2.78:8000/users/signup', {
+    fetch(`${API.SIGNUP}`, {
       method: 'POST',
       body: JSON.stringify({
         username: values.id,
@@ -23,8 +24,11 @@ function Sign() {
       .then(response => response.json())
       .then(data => {
         if (data.message === 'SUCCESS') {
-          navigate('/');
-        } else if (data.message === 'INVALID_USER') {
+          alert('회원 가입 성공! 환영합니다 ~😀');
+          navigate('/login');
+        } else if (data.message === 'INVALID_EMAIL') {
+          alert('비밀번호 형식을 확인해주세요.');
+        } else if (data.message === 'NICKNAME_ALREADY_EXISTS') {
           alert('이미 존재하는 유저입니다.');
         }
       });

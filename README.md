@@ -26,8 +26,13 @@
 6. 검색 기능
 7. 상품 정렬 기능 ( 추천순, 좋아요 순 )
 
+## 구현 파트
+1. 정수인 : Login/SignIn/Nav/Cart
+2. 한영현 : Footer/Main/Detail
+
 ## 데모 사진
 - 회원가입
+   - ddd
 ![Screen Shot 2022-03-13 at 2 03 44 PM](https://user-images.githubusercontent.com/88773996/158045999-2f652f56-9ecd-45bf-ab42-a0596d143b35.png)
 - 로그인
 ![Screen Shot 2022-03-13 at 2 04 11 PM](https://user-images.githubusercontent.com/88773996/158046001-eaf4bfad-0085-4ab1-91a4-a2dd0f4ca584.png)

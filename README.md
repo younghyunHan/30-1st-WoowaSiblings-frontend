@@ -27,23 +27,28 @@
 7. 상품 정렬 기능 ( 추천순, 좋아요 순 )
 
 ## 데모 사진
+- 회원가입
 ![Screen Shot 2022-03-13 at 2 03 44 PM](https://user-images.githubusercontent.com/88773996/158045999-2f652f56-9ecd-45bf-ab42-a0596d143b35.png)
+- 로그인
 ![Screen Shot 2022-03-13 at 2 04 11 PM](https://user-images.githubusercontent.com/88773996/158046001-eaf4bfad-0085-4ab1-91a4-a2dd0f4ca584.png)
-![Screen Shot 2022-03-13 at 2 04 21 PM](https://user-images.githubusercontent.com/88773996/158046004-590c53c7-78c6-4c38-ad0b-563a7df88250.png)
-![Screen Shot 2022-03-13 at 2 04 33 PM](https://user-images.githubusercontent.com/88773996/158046007-cd188b29-cf60-413e-871f-4b64eb45280a.png)
+![Screen Shot 2022-03-13 at 2 04 21 PM](https://user-images.githubusercontent.com/88773996/158046004-590c53c7-78c6-4c38-ad0b-563a7df88250.png)4
+- 메인 
+![Screen Shot 2022-03-13 at 2 04 33 PM](https://user-images.githubusercontent.com/88773996/158046007-cd188b29-cf60-413e-871f-4b64eb45280a.png)4
+- 상세
 ![Screen Shot 2022-03-13 at 2 08 22 PM](https://user-images.githubusercontent.com/88773996/158046012-43161a8d-08f9-46dd-a060-21f003f83618.png)
+- 장바구니
 ![Screen Shot 2022-03-13 at 2 08 47 PM](https://user-images.githubusercontent.com/88773996/158046022-2fcae8a7-5f4b-49b7-aeff-988a2e62bd45.png)
 
 
-
-
 ## 적용 기술
+- Common
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"><img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"><img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"><img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
 
-백엔드
-커먼
-프론트
+- Frontend
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+
 
 ## Reference
-이 프로젝트는 배민 문방구 사이트를 참조하여 학습목적으로 만들었습니다.
-실무수준의 프로젝트이지만 학습용으로 만들었기 때문에 이 코드를 활용하여 이득을 취하거나 무단 배포할 경우 법적으로 문제될 수 있습니다.
+이 프로젝트는 배민 문방구 사이트를 참조하여 학습목적으로 만들었습니다.<br>
+실무수준의 프로젝트이지만 학습용으로 만들었기 때문에 이 코드를 활용하여 이득을 취하거나 무단 배포할 경우 법적으로 문제될 수 있습니다.<br>
 이 프로젝트에서 사용하고 있는 사진 대부분은 위코드에서 구매한 것이므로 해당 프로젝트 외부인이 사용할 수 없습니다.

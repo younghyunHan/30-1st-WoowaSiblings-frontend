@@ -31,17 +31,36 @@
 2. 한영현 : Footer/Main/Detail
 
 ## 데모 사진
-- 회원가입
-   - ddd
+### 회원가입
+- 회원가입시 다양한 유효성 검사 (양식검사, 중복검사, 아이디/비밀번호 불일치 검사)
+- 검사 통과하지 못할 경우 알림창 출력
+- 양식 검사, 중복 검사 통과할 경우 사용 가능
 ![Screen Shot 2022-03-13 at 2 03 44 PM](https://user-images.githubusercontent.com/88773996/158045999-2f652f56-9ecd-45bf-ab42-a0596d143b35.png)
-- 로그인
+
+### 로그인
+- 로그인 시 다양한 유효성 검사 (양식검사, 중복검사, 아이디/비밀번호 불일치 검사)
+- 검사 통과하지 못할 경우 알림창 출력
+- 양식 검사, 중복 검사 통과할 경우 사용 가능
 ![Screen Shot 2022-03-13 at 2 04 11 PM](https://user-images.githubusercontent.com/88773996/158046001-eaf4bfad-0085-4ab1-91a4-a2dd0f4ca584.png)
-![Screen Shot 2022-03-13 at 2 04 21 PM](https://user-images.githubusercontent.com/88773996/158046004-590c53c7-78c6-4c38-ad0b-563a7df88250.png)4
-- 메인 
-![Screen Shot 2022-03-13 at 2 04 33 PM](https://user-images.githubusercontent.com/88773996/158046007-cd188b29-cf60-413e-871f-4b64eb45280a.png)4
-- 상세
+![Screen Shot 2022-03-13 at 2 04 21 PM](https://user-images.githubusercontent.com/88773996/158046004-590c53c7-78c6-4c38-ad0b-563a7df88250.png)
+
+### 메인
+- 할인률에 따른 정가, 할인가 구분해서 스타일링 적용
+- 쿼리스트링 활용해서 카테고리 페이지 구현
+- 동적 라우팅 활용해 상세 페이지 이동 구현
+![Screen Shot 2022-03-13 at 2 04 33 PM](https://user-images.githubusercontent.com/88773996/158046007-cd188b29-cf60-413e-871f-4b64eb45280a.png)
+
+### 상세
+- 로그인 상태일 때 장바구니 버튼 누르면 알림창이 출력되고 장바구니로 이동하면서 체크한 데이터를 백엔드로 보냄
+- 비 로그인 상태일 때 장바구니 버튼 누르면 알림창 출력되고 로그인 페이지로 이동
+- 수량 버튼에 클릭에 따른 수량 조절
 ![Screen Shot 2022-03-13 at 2 08 22 PM](https://user-images.githubusercontent.com/88773996/158046012-43161a8d-08f9-46dd-a060-21f003f83618.png)
-- 장바구니
+
+### 장바구니
+- 체크박스 체크 유무
+- 수량 변경에 따른 가격 변경
+- 구매버튼 누를 시 알림창 출력
+- 장바구니 페이지 렌더링 시 fetch함수를 이용해서 백엔드로부터 장바구니 데이터 받아옴
 ![Screen Shot 2022-03-13 at 2 08 47 PM](https://user-images.githubusercontent.com/88773996/158046022-2fcae8a7-5f4b-49b7-aeff-988a2e62bd45.png)
 
 

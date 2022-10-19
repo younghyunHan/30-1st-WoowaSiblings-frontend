@@ -45,10 +45,10 @@
 ![Screen Shot 2022-03-13 at 2 04 21 PM](https://user-images.githubusercontent.com/88773996/158046004-590c53c7-78c6-4c38-ad0b-563a7df88250.png)
 
 ### 메인
-- 페이지 렌더링 시 백엔드로부터 fetch함수로 데이터 받아옴
-- 동적클래스, 단항 평가 연산자를 활용해 할인률에 따른 정가, 할인가 구분해서 스타일링 적용
-- 쿼리 스트링, useLocation 활용해서 카테고리 페이지 구현
-- 동적 라우팅 ( useParams, path Parameter ) 활용해 상세 페이지 이동 구현
+- 삼항 연산자, 동적 클래스 활용해 정가, 할인가 구분하여 Styling 적용
+- useNavigate, useLocation 활용해 Static Routing 구현
+- useNavigate, pathParameter, useParams를 활용해 Dynamic Routing 구현
+- useNavigate, queryString, useLocation을 활용해 Category별 pagination 구현
 ![Screen Shot 2022-03-13 at 2 04 33 PM](https://user-images.githubusercontent.com/88773996/158046007-cd188b29-cf60-413e-871f-4b64eb45280a.png)
 
 ### 상세

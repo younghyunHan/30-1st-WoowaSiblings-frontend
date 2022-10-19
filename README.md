@@ -52,9 +52,10 @@
 ![Screen Shot 2022-03-13 at 2 04 33 PM](https://user-images.githubusercontent.com/88773996/158046007-cd188b29-cf60-413e-871f-4b64eb45280a.png)
 
 ### 상세
-- 로그인 상태일 때(토큰 있으면) 장바구니 버튼 누르면 알림창이 출력되고 장바구니로 이동하면서 체크한 데이터를 백엔드로 보냄
-- 비 로그인 상태일 때 ( 토큰 없을 때 ) 장바구니 버튼 누르면 알림창 출력되고 로그인 페이지로 이동
-- 수량 버튼에 클릭에 따른 수량 조절
+- 로그인 상태일 때 LocalStorage에 저장된 Token 활용해 장바구니 버튼 누르면 confirm 창이 출력되고, useNavigate 활용해 장바구니로 이동하면서 체크한 제품 수량을 BackEnd로 보내도록 
+  구현
+- 비 로그인 상태일 때 장바구니 버튼 누르면 alert 창 출력, SignIn Page로 이동하도록 구현
+- props와 State를 활용해 자식 Component에서 수량 체크 시 부모 Component 함수에 수량 전달하도록 구현
 ![Screen Shot 2022-03-13 at 2 08 22 PM](https://user-images.githubusercontent.com/88773996/158046012-43161a8d-08f9-46dd-a060-21f003f83618.png)
 
 ### 장바구니
